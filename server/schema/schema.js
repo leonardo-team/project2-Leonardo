@@ -115,14 +115,14 @@ const Mutation = new GraphQLObjectType({
         },
       ) {
         const event = new Events({
-          title: title,
-          description: description,
-          date: date,
-          image: image,
-          status: status,
-          rate: rate,
-          encashTickets: encashTickets,
-          visited: visited,
+          title,
+          description,
+          date,
+          image,
+          status,
+          rate,
+          encashTickets,
+          visited,
         });
         return event.save();
       },
@@ -137,9 +137,9 @@ const Mutation = new GraphQLObjectType({
       },
       resolve(parent, { number, encash, eventId }) {
         const ticket = new Tickets({
-          number: number,
-          encash: encash,
-          eventId: eventId,
+          number,
+          encash,
+          eventId,
         });
         return ticket.save();
       },
@@ -192,14 +192,14 @@ const Mutation = new GraphQLObjectType({
           id,
           {
             $set: {
-              title: title,
-              description: description,
-              date: date,
-              image: image,
-              status: status,
-              rate: rate,
-              encashTickets: encashTickets,
-              visited: visited,
+              title,
+              description,
+              date,
+              image,
+              status,
+              rate,
+              encashTickets,
+              visited,
             },
           },
           { new: true },
@@ -220,9 +220,9 @@ const Mutation = new GraphQLObjectType({
           id,
           {
             $set: {
-              number: number,
-              encash: encash,
-              eventId: eventId,
+              number,
+              encash,
+              eventId,
             },
           },
           { new: true },
