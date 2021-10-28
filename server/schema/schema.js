@@ -23,8 +23,8 @@ const TicketType = new GraphQLObjectType({
     encash: { type: new GraphQLNonNull(GraphQLBoolean) },
     event: {
       type: EventType,
-      resolve(parent, args) {
-        return Events.findById(parent.eventId);
+      resolve({ eventId }, args) {
+        return Events.findById(eventId);
       },
     },
   }),
@@ -44,8 +44,8 @@ const EventType = new GraphQLObjectType({
     visited: { type: new GraphQLNonNull(GraphQLInt) },
     tickets: {
       type: new GraphQLList(TicketType),
-      resolve(parent, args) {
-        return Tickets.find({ eventId: parent.id });
+      resolve({ id }, args) {
+        return Tickets.find({ eventId: id });
       },
     },
   }),
@@ -57,30 +57,30 @@ const Query = new GraphQLObjectType({
     event: {
       type: EventType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, args) {
-        return Events.findById(args.id);
+      resolve(parent, { id }) {
+        return Events.findById(id);
       },
     },
 
     events: {
       type: new GraphQLList(EventType),
-      resolve(parent, args) {
-        return Events.find({});
+      resolve(parent, { title }) {
+        return Events.find({ title: { $regex: title, $options: 'i' } });
       },
     },
 
     ticket: {
       type: TicketType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, args) {
-        return Tickets.findById(args.id);
+      resolve(parent, { id }) {
+        return Tickets.findById(id);
       },
     },
 
     tickets: {
       type: new GraphQLList(TicketType),
-      resolve(parent, args) {
-        return Tickets.find({});
+      resolve(parent, { number }) {
+        return Tickets.find({ number: { $regex: number, $options: 'i' } });
       },
     },
   },
@@ -101,16 +101,28 @@ const Mutation = new GraphQLObjectType({
         encashTickets: { type: new GraphQLNonNull(GraphQLInt) },
         visited: { type: new GraphQLNonNull(GraphQLInt) },
       },
-      resolve(parent, args) {
+      resolve(
+        parent,
+        {
+          title,
+          description,
+          date,
+          image,
+          status,
+          rate,
+          encashTickets,
+          visited,
+        },
+      ) {
         const event = new Events({
-          title: args.title,
-          description: args.description,
-          date: args.date,
-          image: args.image,
-          status: args.status,
-          rate: args.rate,
-          encashTickets: args.encashTickets,
-          visited: args.visited,
+          title: title,
+          description: description,
+          date: date,
+          image: image,
+          status: status,
+          rate: rate,
+          encashTickets: encashTickets,
+          visited: visited,
         });
         return event.save();
       },
@@ -123,11 +135,11 @@ const Mutation = new GraphQLObjectType({
         encash: { type: new GraphQLNonNull(GraphQLBoolean) },
         eventId: { type: GraphQLString },
       },
-      resolve(parent, args) {
+      resolve(parent, { number, encash, eventId }) {
         const ticket = new Tickets({
-          number: args.number,
-          encash: args.encash,
-          eventId: args.eventId,
+          number: number,
+          encash: encash,
+          eventId: eventId,
         });
         return ticket.save();
       },
@@ -136,16 +148,16 @@ const Mutation = new GraphQLObjectType({
     deleteEvent: {
       type: EventType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, args) {
-        return Events.findByIdAndRemove(args.id);
+      resolve(parent, { id }) {
+        return Events.findByIdAndRemove(id);
       },
     },
 
     deleteTicket: {
       type: TicketType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, args) {
-        return Tickets.findByIdAndRemove(args.id);
+      resolve(parent, { id }) {
+        return Tickets.findByIdAndRemove(id);
       },
     },
 
@@ -162,19 +174,32 @@ const Mutation = new GraphQLObjectType({
         encashTickets: { type: new GraphQLNonNull(GraphQLInt) },
         visited: { type: new GraphQLNonNull(GraphQLInt) },
       },
-      resolve(parent, args) {
+      resolve(
+        parent,
+        {
+          id,
+          title,
+          description,
+          date,
+          image,
+          status,
+          rate,
+          encashTickets,
+          visited,
+        },
+      ) {
         return Events.findByIdAndUpdate(
-          args.id,
+          id,
           {
             $set: {
-              title: args.title,
-              description: args.description,
-              date: args.date,
-              image: args.image,
-              status: args.status,
-              rate: args.rate,
-              encashTickets: args.encashTickets,
-              visited: args.visited,
+              title: title,
+              description: description,
+              date: date,
+              image: image,
+              status: status,
+              rate: rate,
+              encashTickets: encashTickets,
+              visited: visited,
             },
           },
           { new: true },
@@ -190,14 +215,14 @@ const Mutation = new GraphQLObjectType({
         encash: { type: new GraphQLNonNull(GraphQLBoolean) },
         eventId: { type: GraphQLString },
       },
-      resolve(parent, args) {
+      resolve(parent, { id, number, encash, eventId }) {
         return Tickets.findByIdAndUpdate(
-          args.id,
+          id,
           {
             $set: {
-              number: args.number,
-              encash: args.encash,
-              eventId: args.eventId,
+              number: number,
+              encash: encash,
+              eventId: eventId,
             },
           },
           { new: true },
