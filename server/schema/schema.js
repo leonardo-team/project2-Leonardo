@@ -1,6 +1,7 @@
 const graphql = require('graphql');
 const {
   GraphQLObjectType,
+  GraphQLInputObjectType,
   GraphQLString,
   GraphQLSchema,
   GraphQLID,
@@ -51,6 +52,29 @@ const EventType = new GraphQLObjectType({
   }),
 });
 
+const PaginationArgType = new GraphQLInputObjectType({
+  name: 'PaginationArg',
+  fields: {
+    offset: {
+      type: GraphQLInt,
+      description: 'Skip n rows.',
+    },
+    first: {
+      type: GraphQLInt,
+      description: 'First n rows after the offset.',
+    },
+  },
+});
+
+const PaginatedListType = ItemType =>
+  new GraphQLObjectType({
+    name: 'Paginated' + ItemType,
+    fields: {
+      count: { type: GraphQLInt },
+      items: { type: new GraphQLList(ItemType) },
+    },
+  });
+
 const Query = new GraphQLObjectType({
   name: 'Query',
   fields: {
@@ -63,9 +87,23 @@ const Query = new GraphQLObjectType({
     },
 
     events: {
-      type: new GraphQLList(EventType),
-      resolve(parent, { title }) {
-        return Events.find({ title: { $regex: title, $options: 'i' } });
+      type: PaginatedListType(EventType),
+      args: {
+        pagination: {
+          type: PaginationArgType,
+          defaultValue: { offset: 0, first: 10 },
+        },
+        title: { type: GraphQLString },
+      },
+      resolve(_, { pagination, title }) {
+        const { offset, first } = pagination;
+        return {
+          items: Events.find({ title: { $regex: title, $options: 'i' } })
+            .skip(offset)
+            .limit(first)
+            .exec(),
+          count: Events.countDocuments(),
+        };
       },
     },
 
