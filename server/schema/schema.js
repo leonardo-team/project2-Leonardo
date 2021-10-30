@@ -59,7 +59,7 @@ const PaginationArgType = new GraphQLInputObjectType({
       type: GraphQLInt,
       description: 'Skip n rows.',
     },
-    first: {
+    limit: {
       type: GraphQLInt,
       description: 'First n rows after the offset.',
     },
@@ -91,16 +91,16 @@ const Query = new GraphQLObjectType({
       args: {
         pagination: {
           type: PaginationArgType,
-          defaultValue: { offset: 0, first: 10 },
+          defaultValue: { offset: 0, limit: 10 },
         },
         title: { type: GraphQLString },
       },
       resolve(_, { pagination, title }) {
-        const { offset, first } = pagination;
+        const { offset, limit } = pagination;
         return {
           items: Events.find({ title: { $regex: title, $options: 'i' } })
             .skip(offset)
-            .limit(first)
+            .limit(limit)
             .exec(),
           count: Events.countDocuments(),
         };
