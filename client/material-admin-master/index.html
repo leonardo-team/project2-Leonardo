@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Control Panel</title>
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'
+        type='text/css' />
+  <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css'>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.1/css/all.css'
+        integrity='sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP' crossorigin='anonymous'>
+  <link href='assets/css/custom.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<!-- github fork banner -->
+<ul id='slide-out' class='side-nav fixed z-depth-4'>
+  <li>
+    <div class='userView'>
+      <div class='background'>
+        <img src='assets/img/photo1.png'>
+      </div>
+      <a href='#!user'><img class='circle' src='assets/img/avatar04.png'></a>
+      <a href='#!name'><span class='white-text name'>Welcome back,</span></a>
+      <a href='#!email'><span class='white-text email'>user!</span></a>
+    </div>
+  </li>
+
+  <li>
+    <form class='sidebar-form'>
+      <div class='input-group'>
+        <input id='accounts' type='text' name='username' class='form-control' placeholder='Найти событие'
+               autocomplete='off' />
+      </div>
+    </form>
+  </li>
+
+  <li><a class='active' href='index.html'><i class='material-icons pink-item'>dashboard</i>События</a></li>
+  <li>
+    <div class='divider'></div>
+  </li>
+
+  <li><a class='subheader'>Management</a></li>
+  <li><a href='eventdetails.html'><i class='material-icons pink-item'>note_add</i>Новое событие</a></li>
+
+</ul>
+<main>
+  <section class='content'>
+    <div class='page-announce valign-wrapper'>
+      <a href='#' data-activates='slide-out' class='button-collapse valign hide-on-large-only'>
+        <i class='material-icons'>menu</i></a>
+      <h1 class='page-announce-text valign'>// Календарь событий </h1>
+    </div>
+    <!-- Stat Boxes -->
+    <div class='row'>
+      <div class='col l4 s6'>
+        <!-- small box -->
+        <div class='small-box bg-green'>
+          <div class='inner'>
+            <h3>69</h3>
+            <p>Проведенных мероприятий</p>
+          </div>
+          <div class='icon'>
+            <i class='fas fa-sign-language'></i>
+          </div>
+          <a href='#' class='small-box-footer' class='animsition-link'>More info <i
+            class='fa fa-arrow-circle-right'></i></a>
+        </div>
+      </div><!-- ./col -->
+
+      <div class='col l4 s6'>
+        <!-- small box -->
+        <div class='small-box bg-yellow'>
+          <div class='inner'>
+            <h3>36</h3>
+            <p>Запланированных мероприятий</p>
+          </div>
+          <div class='icon'>
+            <i class='far fa-calendar-check'></i>
+          </div>
+          <a href='#' class='small-box-footer' class='animsition-link'>More info <i
+            class='fa fa-arrow-circle-right'></i></a>
+        </div>
+      </div><!-- ./col -->
+
+      <div class='col l4 s6'>
+        <!-- small box -->
+        <div class='small-box bg-red'>
+          <div class='inner'>
+            <h3>37</h3>
+            <p>Отмененных мероприятий</p>
+          </div>
+          <div class='icon'>
+            <i class='fas fa-microphone-alt-slash'></i>
+          </div>
+          <a href='#' class='small-box-footer' class='animsition-link'>More info <i
+            class='fa fa-arrow-circle-right'></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class='row'>
+    <div class='container'>
+      <h3 class='center-align'>Сюда будем выводить список событий</h3>
+      <div class='custom-responsive'>
+        <table class='striped hover centered'>
+          <thead>
+          <tr>
+            <th>Название</th>
+            <th>Дата проведения</th>
+            <th>Реализовано билетов</th>
+            <th>Статус</th>
+            <th>Редактировать / Удалить</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>First happening</td>
+            <td>2021-12-29 23:14</td>
+            <td>25</td>
+            <td><i class='text-green material-icons green-item'>check</i></td>
+            <td>
+              <div class="btn-toolbar">
+                <a href="#">
+                  <button class="btn green" type="submit">
+                    <a href='eventdetails.html'>
+                      <i class="material-icons">done</i>
+                    </a>
+                  </button>
+                </a>
+                <a href="#">
+                  <button class="btn red" type="submit">
+                    <i class="material-icons">remove</i>
+                  </button>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Second happening</td>
+            <td>2021-12-29 23:14</td>
+            <td>34</td>
+            <td><i class='text-green material-icons green-item'>check</i></td>
+            <td>
+              <div class="btn-toolbar">
+                <a href="#">
+                  <button class="btn green" type="submit">
+                    <a href='eventdetails.html'>
+                      <i class="material-icons">done</i>
+                    </a>
+                  </button>
+                </a>
+                <a href="#">
+                  <button class="btn red" type="submit">
+                    <i class="material-icons">remove</i>
+                  </button>
+                </a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Third happening</td>
+            <td>2021-12-29 23:14</td>
+            <td>46</td>
+            <td><i class='text-red material-icons pink-item'>close</i></td>
+            <td>
+              <div class="btn-toolbar">
+                <a href="#">
+                  <button class="btn green" type="submit">
+                    <a href='eventdetails.html'>
+                      <i class="material-icons">done</i>
+                    </a>
+                  </button>
+                </a>
+                <a href="#">
+                  <button class="btn red" type="submit">
+                    <i class="material-icons">remove</i>
+                  </button>
+                </a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Fourth happening</td>
+            <td>2021-12-29 23:14</td>
+            <td>48</td>
+            <td><i class="fas fa-hourglass-half green-item"></i></td>
+            <td>
+              <div class="btn-toolbar">
+                <a href="#">
+                  <button class="btn green" type="submit">
+                    <a href='eventdetails.html'>
+                      <i class="material-icons">done</i>
+                    </a>
+                  </button>
+                </a>
+                <a href="#">
+                  <button class="btn red" type="submit">
+                    <i class="material-icons">remove</i>
+                  </button>
+                </a>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Fifth happening</td>
+            <td>2021-12-29 23:14</td>
+            <td>48</td>
+            <td><i class='text-green material-icons green-item'>check</i></td>
+            <td>
+              <div class="btn-toolbar">
+                <a href="#">
+                  <button class="btn green" type="submit">
+                    <a href='eventdetails.html'>
+                      <i class="material-icons">done</i>
+                    </a>
+                  </button>
+                </a>
+                <a href="#">
+                  <button class="btn red" type="submit">
+                    <i class="material-icons">remove</i>
+                  </button>
+                </a>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class='page-footer'>
+  <div class='footer-copyright'>
+    <div class='container'>
+      © 2021 Kirill Designs. All rights reserved. ))
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
