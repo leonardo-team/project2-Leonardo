@@ -1,14 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { offsetLimitPagination } from '@apollo/client/utilities';
+
+import { Admin } from './view/pages/Admin';
+
 import './App.css';
-import { adminLoginForm } from './view/elements/AdminLoginForm';
-import { errorPage } from './view/pages/ErrorPage';
+
+//import { CreateForm } from './view/components/createEventCard';
+
+const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        event: offsetLimitPagination(),
+        events: offsetLimitPagination(),
+        ticket: offsetLimitPagination(),
+        tickets: offsetLimitPagination(),
+      },
+    },
+  },
+});
+
+const client = new ApolloClient({
+  cache: cache,
+  uri: 'http://localhost:3005/graphql',
+});
 
 function App() {
   return (
-    <div className="App">
-   
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Admin />
+      </div>
+    </ApolloProvider>
   );
 }
 
