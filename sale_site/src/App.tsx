@@ -1,13 +1,16 @@
 import React from 'react'
 import './App.css';
-import { Login } from './components/pages/login_page';
-import { Site } from './components/pages/site';
+import { Header } from './components/pages/header';
+import { Futer } from './components/pages/footer';
+import { Main } from './components/pages/main';
 
 
 function App() {
   return (
     <div className="App">
-      <Site/>
+      <Header/>
+      <Main/>
+      <Futer/>
     </div>
   );
 }

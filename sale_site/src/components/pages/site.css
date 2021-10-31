@@ -4092,6 +4092,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	min-height: 64px;
 	max-height: 1000px;
 	z-index: 3;
+	position: fixed;
 	background-color: #3f51b5;
 	color: #fff;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
@@ -5954,7 +5955,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .page-content {
 	display: flex;
-	margin: 0 auto;
+	margin: 70px auto;
 }
 .mdl-grid {
 	display: -webkit-flex;
@@ -6772,5 +6773,17 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .demo-card-square > .mdl-card__title {
 	color: #fff;
-	background: url(../event-card/avatar.svg) no-repeat #4169e1;
+	background: url(../event-card/avatar.svg) no-repeat #ec8b46;
+}
+.Login_page {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100px;
+}
+.Login_page-login {
+	max-width: 150px;
+}
+.Login_page-password {
+	max-width: 150px;
 }
