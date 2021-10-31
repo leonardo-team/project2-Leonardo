@@ -1,17 +1,13 @@
+import React from 'react'
 import './App.css';
-import { Site } from './components/site/site';
+import { Login } from './components/pages/login_page';
+import { Site } from './components/pages/site';
+
 
 function App() {
-
-
   return (
     <div className="App">
-      <div className="mdl-grid">
-      <Site />
-      <Site />
       <Site/>
-      </div>
-
     </div>
   );
 }
