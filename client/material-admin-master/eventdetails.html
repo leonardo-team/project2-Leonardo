@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Control Panel</title>
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css'>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.1/css/all.css'
+        integrity='sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP' crossorigin='anonymous'>
+  <link href='assets/css/custom.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+<ul id='slide-out' class='side-nav fixed z-depth-4'>
+  <li>
+    <div class='userView'>
+      <div class='background'>
+        <img src='assets/img/photo1.png'>
+      </div>
+      <a href='#!user'><img class='circle' src='assets/img/avatar04.png'></a>
+      <a href='#!name'><span class='white-text name'>Welcome back,</span></a>
+      <a href='#!email'><span class='white-text email'>user!</span></a>
+    </div>
+  </li>
+
+  <li>
+    <form class='sidebar-form'>
+      <div class='input-group'>
+        <input id='accounts' type='text' name='username' class='form-control' placeholder='Universal Search'
+               autocomplete='off' />
+      </div>
+    </form>
+  </li>
+
+  <li><a class='active' href='index.html'><i class='material-icons pink-item'>dashboard</i>События</a></li>
+  <li>
+    <div class='divider'></div>
+  </li>
+</ul>
+
+<main>
+  <section class='content'>
+    <div class='page-announce valign-wrapper'><a href='#' data-activates='slide-out'
+                                                 class='button-collapse valign hide-on-large-only'><i
+      class='material-icons'>menu</i></a>
+      <h1 class='page-announce-text valign'>// Редактировать </h1></div>
+    <div class='container'>
+      <form id='user'>
+        <table class='table table-hover'>
+          <tbody>
+            <tr>
+              <input type='hidden' name='pastdata' value='{{ usr.id }}' />
+              <td><label for='title'>Событие: </label></td>
+              <td><input id= 'title' type='text' name='usrname' value='Название события' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='date'>Дата проведения: </label></td>
+              <td><input id='date' type='text' name='email' value='2021-12-29 23:14' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='annotation'>Описание мероприятия: </label></td>
+              <td><input id='annotation' type='text' name='email' value='Тут вообще-то нужен text-aria' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='status'>Статус мероприятия: </label></td>
+              <td><input id='status' type='text' name='accesslevel' value='Ожидается проведение' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='tickets'>Количество мест: </label></td>
+              <td><input id='tickets' type='text' name='accesslevel' value='300' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='encashTickets'>Реализовано билетов: </label></td>
+              <td><input id='encashTickets' type='text' name='accesslevel' value='25' /></td>
+            </tr>
+
+            <tr>
+              <td><label for='visited'>Реальных посетителей: </label></td>
+              <td><input id='visited' type='text' name='accesslevel' value='0' /></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class='center-align'><input class='btn btn-success' type='submit' value='Submit' /></div>
+      </form>
+
+    </div>
+  </section>
+</main>
+<footer class='page-footer'>
+  <div class='footer-copyright'>
+    <div class='container'>
+      © 2021 Kirill Designs. All rights reserved. ))
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
