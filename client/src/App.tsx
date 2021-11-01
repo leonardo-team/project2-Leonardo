@@ -15,14 +15,14 @@ const cache = new InMemoryCache({
         event: offsetLimitPagination(),
         events: offsetLimitPagination(),
         ticket: offsetLimitPagination(),
-        tickets: offsetLimitPagination(),
-      },
-    },
-  },
+        tickets: offsetLimitPagination()
+      }
+    }
+  }
 });
 const client = new ApolloClient({
   cache: cache,
-  uri: 'http://localhost:3005/graphql',
+  uri: 'http://localhost:3005/graphql'
 });
 */
 
