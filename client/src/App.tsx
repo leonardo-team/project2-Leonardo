@@ -28,11 +28,20 @@ const client = new ApolloClient({
 
 function App() {
   return (
+<<<<<<< HEAD
     // <ApolloProvider client={client}>
     <div className="App">
       <CreateForm />
     </div>
     //  </ApolloProvider>
+=======
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Admin />
+      </div>
+    </ApolloProvider>
+
+>>>>>>> 2bc39d0 (admin no functional)
   );
 }
 
