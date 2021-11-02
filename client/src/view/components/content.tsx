@@ -1,13 +1,21 @@
+import { FC } from 'react';
 import '../assets/css/custom.css';
 
-export const Content = ()=>{
+export type ContentProps = {
+    statistic:
+  {planned?: number;
+  completed?: number;
+  canceled?: number;},
+};
+
+export const Content: FC<ContentProps> = ({ statistic })=>{
   return (
     <div className="Content">
         <div className='row'>
             <div className='col l3 s6'>
                 <div className='small-box bg-green'>
                     <div className='inner'>
-                        <h3>69</h3>
+                        <h3>{statistic.completed}</h3>
                         <p>Проведенных мероприятий</p>
                     </div>
                     <div className='icon'>
@@ -22,7 +30,7 @@ export const Content = ()=>{
             <div className='col l3 s6'>
                 <div className='small-box bg-yellow'>
                     <div className='inner'>
-                        <h3>36</h3>
+                        <h3>{ statistic.planned }</h3>
                         <p>Предстоящих мероприятий</p>
                     </div>
                     <div className='icon'>
@@ -38,7 +46,7 @@ export const Content = ()=>{
 
                 <div className='small-box bg-red'>
                     <div className='inner'>
-                        <h3>37</h3>
+                        <h3>{statistic.canceled}</h3>
                         <p>Отмененных мероприятий</p>
                     </div>
                     <div className='icon'>
@@ -54,7 +62,7 @@ export const Content = ()=>{
 
                 <div className='small-box bg-aqua'>
                     <div className='inner'>
-                        <h3>142</h3>
+                        <h3>Тут сумма всех событий но я не сообразил как это сделать</h3>
                         <p>Всего мероприятий</p>
                     </div>
                     <div className='icon'>
