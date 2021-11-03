@@ -5,8 +5,8 @@ import React from 'react';
 // import { Admin } from './view/pages/Admin';
 
 import './App.css';
-// import { CreateForm } from './view/components/EventDetails';
-import SideMenu from './view/components/SideMenu';
+import { CreateForm } from './view/components/EventDetails';
+
 /*
 const cache = new InMemoryCache({
   typePolicies: {
@@ -30,7 +30,7 @@ function App() {
   return (
     // <ApolloProvider client={client}>
     <div className="App">
-      <SideMenu />
+      <CreateForm />
     </div>
     //  </ApolloProvider>
   );
