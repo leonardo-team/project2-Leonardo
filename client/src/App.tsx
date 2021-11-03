@@ -6,6 +6,7 @@ import React from 'react';
 
 import './App.css';
 import { CreateForm } from './view/components/EventDetails';
+
 /*
 const cache = new InMemoryCache({
   typePolicies: {
