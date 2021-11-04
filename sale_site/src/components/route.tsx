@@ -1,9 +1,9 @@
 import { Switch, Route } from 'react-router-dom'
-import { Home } from './events'
-import { Login } from './login_page'
+import { Home } from './home'
+import { Login } from './login'
 
-export const Main = () => (
-  <main className="Main">
+export const Rout = () => (
+  <main className="Rout">
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/login_page.tsx' component={Login}/>

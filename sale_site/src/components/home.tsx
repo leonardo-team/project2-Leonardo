@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import { EventCard } from '../event-card/event_card';
+import { EventCard } from './event-card/event_card';
 import './site.css'
 
 

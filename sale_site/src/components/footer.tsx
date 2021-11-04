@@ -1,6 +1,6 @@
 import './site.css'
 
-export const Futer = ()=>{
+export const Footer = ()=>{
 
   return (
 

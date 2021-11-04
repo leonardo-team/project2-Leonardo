@@ -14,6 +14,9 @@ export function Login(){
           <label htmlFor="">Пароль</label>
             <input className="Login_page-password" type="password" />
         </div>
+        <button className="mdl-button mdl-js-button mdl-button--raised">
+            Войти
+        </button>
     </div>
   )
 }

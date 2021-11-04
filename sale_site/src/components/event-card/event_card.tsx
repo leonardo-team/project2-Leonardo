@@ -1,6 +1,6 @@
 import {FC} from 'react';
-import '../pages/site.css'
-import avatar from './avatar.svg'
+import '../site.css'
+
 
 export type CardProps = {
     eventName?:string;

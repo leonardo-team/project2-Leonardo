@@ -2,6 +2,7 @@ import './site.css'
 
 
 
+
 export const Header = ()=>{
 
   return (
@@ -16,7 +17,7 @@ export const Header = ()=>{
                   <span className="mdl-layout-title">Мероприятия в Саратове</span>
                   <div className="mdl-layout-spacer"></div>
                   <nav className="mdl-navigation mdl-layout--large-screen-only">
-                    <a className="mdl-navigation__link" href="/login_page.tsx">
+                    <a className="mdl-navigation__link" href="/login_page.tsx" onClick={()=>{console.log("click")}}>
                       Войти
                     </a>
                   </nav>
