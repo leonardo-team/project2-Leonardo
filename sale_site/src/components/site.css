@@ -6773,7 +6773,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .demo-card-square > .mdl-card__title {
 	color: #fff;
-	background: url(../event-card/avatar.svg) no-repeat #ec8b46;
+	background: url(../components/event-card/avatar.svg) no-repeat #ec8b46;
 }
 .Login_page {
 	display: flex;
