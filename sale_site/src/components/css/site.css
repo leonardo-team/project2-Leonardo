@@ -2338,7 +2338,7 @@ input.mdl-button[type='submit'] {
 }
 .mdl-button--raised {
 	margin: 0 16px;
-	background: rgba(158, 158, 158, 0.2);
+	background: #f8f23d;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
 		0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
@@ -2481,19 +2481,19 @@ input.mdl-button[type='submit'] {
 }
 .mdl-button--primary.mdl-button--primary.mdl-button--raised,
 .mdl-button--primary.mdl-button--primary.mdl-button--fab {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	background-color: #3f51b5;
 }
 .mdl-button--accent.mdl-button--accent {
 	color: #ff4081;
 }
 .mdl-button--accent.mdl-button--accent .mdl-ripple {
-	background: #fff;
+	background: #f8f23d;
 }
 .mdl-button--accent.mdl-button--accent.mdl-button--raised,
 .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-	color: #fff;
-	background-color: #ff4081;
+	color: rgb(0, 0, 0);
+	background-color: #f8f23d;
 }
 .mdl-button[disabled][disabled],
 .mdl-button.mdl-button--disabled.mdl-button--disabled {
@@ -2549,7 +2549,7 @@ input.mdl-button[type='submit'] {
 .mdl-card__title {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: flex-end;
 	color: #000;
 	display: block;
 	display: -webkit-flex;
@@ -2565,6 +2565,7 @@ input.mdl-button[type='submit'] {
 	-webkit-transform-origin: 165px 56px;
 	transform-origin: 165px 56px;
 	box-sizing: border-box;
+	justify-content: space-between;
 }
 .mdl-card__title.mdl-card--border {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -6773,17 +6774,35 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .demo-card-square > .mdl-card__title {
 	color: #fff;
-	background: url(../components/event-card/avatar.svg) no-repeat #ec8b46;
+	background: url(../event_card/avatar.svg) no-repeat #ec8b46;
+}
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .Login_page {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
-	height: 100px;
+	height: auto;
+	min-height: 100px;
 }
 .Login_page-login {
 	max-width: 150px;
 }
 .Login_page-password {
 	max-width: 150px;
+}
+.Home {
+	display: flex;
+	justify-content: center;
+}
+.my_button {
+	display: none;
+}
+.my_card:hover .my_button {
+	display: block;
 }
