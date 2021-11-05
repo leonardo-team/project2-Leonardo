@@ -1,13 +1,12 @@
 import React from 'react';
-// import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-// import { offsetLimitPagination } from '@apollo/client/utilities';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { offsetLimitPagination } from '@apollo/client/utilities';
 
-// import { Admin } from './view/pages/Admin';
+import { Admin } from './view/pages/Admin';
 
 import './App.css';
 import { CreateForm } from './view/components/EventDetails';
 
-/*
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -24,15 +23,14 @@ const client = new ApolloClient({
   cache: cache,
   uri: 'http://localhost:3005/graphql'
 });
-*/
 
 function App() {
   return (
-    // <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
     <div className="App">
       <CreateForm />
     </div>
-    //  </ApolloProvider>
+     </ApolloProvider>
   );
 }
 

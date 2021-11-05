@@ -1,9 +1,11 @@
 import { Content } from '../components/content';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
+import SideMenu from '../components/SideMenu';
 
 export function Admin() {
   return <div className="admin">
+    <SideMenu />
     <Header />
     <Content statistic={{
       planned: 42,
