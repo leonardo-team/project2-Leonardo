@@ -1,4 +1,4 @@
-import { Ticket } from './ticket';
+import { Ticket } from './Ticket';
 const tickets = [
   {
     id: '1',
@@ -41,13 +41,14 @@ const tickets = [
     encash: true
   }
 ];
+
 export const TicketsQuantityContain = () => {
   const ticketsArr = tickets.map(ticket => {
-    return <Ticket key={ticket.id} number={ticket.number} encash={ticket.encash} />;
+    return <Ticket key={ticket.id} number={ticket.number} />;
   });
   return (
     <div>
-      <h3 className="center-align">{props.EventName}</h3>
+      <h3 className="center-align">Что-то</h3>
       <div className="row">{ticketsArr}</div>
     </div>
   );

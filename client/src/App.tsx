@@ -5,7 +5,6 @@ import { offsetLimitPagination } from '@apollo/client/utilities';
 import { Admin } from './view/pages/Admin';
 
 import './App.css';
-import { CreateForm } from './view/components/EventDetails';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -28,7 +27,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div className="App">
-      <CreateForm />
+      <Admin />
     </div>
      </ApolloProvider>
   );
