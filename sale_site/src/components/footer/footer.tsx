@@ -1,4 +1,4 @@
-import './site.css'
+import '../css/site.css'
 
 export const Footer = ()=>{
 
