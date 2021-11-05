@@ -6,7 +6,7 @@ export const Rout = () => (
   <main className="Rout">
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/login_page.tsx' component={Login}/>
+      <Route path='/login.tsx' component={Login}/>
     </Switch>
   </main>
 )
