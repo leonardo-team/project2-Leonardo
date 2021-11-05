@@ -1,7 +1,8 @@
 import react from 'react';
-import 'materialize-css/dist/css/materialize.css';
+// import 'materialize-css/dist/css/materialize.css';
+import '../assets/css/custom.css';
 
-function SideMenu() {
+export function SideMenu() {
   return (
         <ul>
             <li>
