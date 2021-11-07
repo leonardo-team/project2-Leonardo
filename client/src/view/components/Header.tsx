@@ -1,4 +1,4 @@
-import '../assets/css/custom.css';
+import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
 
 export const Header = ()=>{
   return (

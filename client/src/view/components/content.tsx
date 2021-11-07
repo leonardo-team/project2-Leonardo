@@ -43,7 +43,6 @@ export const Content: FC<ContentProps> = ({ statistic })=>{
             </div>
 
             <div className='col l3 s6'>
-
                 <div className='small-box bg-red'>
                     <div className='inner'>
                         <h3>{statistic.canceled}</h3>
@@ -59,7 +58,6 @@ export const Content: FC<ContentProps> = ({ statistic })=>{
             </div>
 
             <div className='col l3 s6'>
-
                 <div className='small-box bg-aqua'>
                     <div className='inner'>
                         <h3>Тут сумма всех событий но я не сообразил как это сделать</h3>
