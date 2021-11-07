@@ -1,5 +1,10 @@
 import react from 'react';
+
 import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
+
+import 'materialize-css/dist/css/materialize.css';
+import '../assets/css/custom.css';
+
 
 export function SideMenu() {
   return (
