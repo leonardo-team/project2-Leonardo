@@ -10,30 +10,92 @@ export type EventStringProps = {
 
 export const EventString:FC<EventStringProps> = ({ title, date, ticket, status })=>{
   return (
-  <div className="EventBlock">
-                              <tr>
-                                <td>{title}</td>
-                                <td>{date}</td>
-                                <td>{ticket}</td>
-                                <td><i className='text-green material-icons green-item'>{status}</i></td>
-                                <td>
-                                    <div className='btn-toolbar'>
-                                        <a href='#'>
-                                            <button className='btn green' type='submit'>
-                                                <a href='eventdetails.html'>
-                                                    <i className='material-icons'>done</i>
-                                                </a>
-                                            </button>
-                                        </a>
-                                        <a href='#'>
-                                            <button className='btn red' type='submit'>
-                                                <i className='material-icons'>remove</i>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-  </div>
+
+        <tr>
+        {
+         status === 'check'
+         && (
+        <>
+        <td>{title}</td>
+        <td>{date}</td>
+        <td>{ticket}</td>
+        <td>
+            <i className='text-green material-icons green-item'>check</i>
+        </td>
+        <td>
+            <div className='btn-toolbar'>
+                <a href='#'>
+                    <button className='btn green' type='submit'>
+                        <a href='eventdetails.html'>
+                            <i className='material-icons'>done</i>
+                        </a>
+                    </button>
+                </a>
+                <a href='#'>
+                    <button className='btn red' type='submit'>
+                        <i className='material-icons'>remove</i>
+                    </button>
+                </a>
+            </div>
+        </td>
+
+        </>)
+        }
+        {
+         status === 'close'
+         && (
+        <>
+        <td>{title}</td>
+        <td>{date}</td>
+        <td>{ticket}</td>
+        <td><i className='text-red material-icons pink-item'>close</i></td>
+        <td>
+            <div className='btn-toolbar'>
+                <a href='#'>
+                    <button className='btn green' type='submit'>
+                        <a href='eventdetails.html'>
+                            <i className='material-icons'>done</i>
+                        </a>
+                    </button>
+                </a>
+                <a href='#'>
+                    <button className='btn red' type='submit'>
+                        <i className='material-icons'>remove</i>
+                    </button>
+                </a>
+            </div>
+        </td>
+
+        </>)
+        }
+        {
+         status === 'planned'
+         && (
+        <>
+        <td>{title}</td>
+        <td>{date}</td>
+        <td>{ticket}</td>
+        <td><i className='fas fa-hourglass-half green-item'></i></td>
+        <td>
+            <div className='btn-toolbar'>
+                <a href='#'>
+                    <button className='btn green' type='submit'>
+                        <a href='eventdetails.html'>
+                            <i className='material-icons'>done</i>
+                        </a>
+                    </button>
+                </a>
+                <a href='#'>
+                    <button className='btn red' type='submit'>
+                        <i className='material-icons'>remove</i>
+                    </button>
+                </a>
+            </div>
+        </td>
+
+        </>)
+        }
+    </tr>
 
   );
 };

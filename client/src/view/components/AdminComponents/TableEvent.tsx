@@ -5,16 +5,45 @@ import 'materialize-css/dist/css/materialize.min.css';
 import { EventBlock } from './EventBlock';
 import { EventString } from './EventString';
 
-const eventData = {
+const eventsData = [{
   title: 'Концерт группы Лесоповал',
   description: 'Наши любимые песни которые всегды будет в наших сердцах',
   date: '21.11.2021',
   image: String,
-  status: '',
+  status: 'planned',
   rate: Number,
   encashTickets: 56,
   visited: Number
-};
+},
+{
+  title: 'Выставка работ Дэвида Линча',
+  description: 'картины знаменитого режиссера',
+  date: '12.11.2021',
+  image: String,
+  status: 'close',
+  rate: Number,
+  encashTickets: 12,
+  visited: Number
+},
+{
+  title: 'Всероссийский Марафон',
+  description: 'Различные дистанции',
+  date: '03.11.2021',
+  image: String,
+  status: 'check',
+  rate: Number,
+  encashTickets: 260,
+  visited: Number
+}
+];
+
+const eventString = eventsData.map((item, i)=> <EventString
+    key={i}
+    title={item.title}
+    date={item.date}
+    ticket={item.encashTickets}
+    status={item.status}
+/>);
 
 export const TableEvents = ()=>{
   return (
@@ -32,7 +61,7 @@ export const TableEvents = ()=>{
                             </tr>
                         </thead>
                         <tbody>
-                            <EventString title={eventData.title} date={eventData.date} ticket={eventData.encashTickets} status={eventData.status} />
+                            {eventString}
                         </tbody>
                     </table>
                 </div>
