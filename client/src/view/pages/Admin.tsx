@@ -5,14 +5,19 @@ import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { SideMenu } from '../components/SideMenu';
 import { TableEvents } from '../components/AdminComponents/TableEvent';
+import { FC } from 'react';
 
-export function Admin() {
+export type AdminProps = {
+  path?:string
+}
+
+export const Admin:FC <AdminProps> = ({ path }) =>{
   return <div className="admin">
     <body>
       <SideMenu />
       <main>
         <section className='content'>
-          <Header />
+          <Header path={path}/>
           <Statistic />
           <TableEvents />
           <Footer />
@@ -20,4 +25,4 @@ export function Admin() {
       </main>
     </body>
   </div>;
-}
+};
