@@ -1,5 +1,5 @@
 import { FC, useCallback, useRef, useState } from 'react';
-import 'materialize-css/dist/css/materialize.css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 const EVENTSTATUS = ['Планируется', 'Отменено', 'Прошло'];
 const EMPTY_FORM = {

@@ -2,10 +2,13 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { offsetLimitPagination } from '@apollo/client/utilities';
 
-import { Admin } from './view/pages/Admin';
+// import { Admin } from './view/pages/Admin';
 
 import './App.css';
 import Routing from './view/components/routing';
+import { ShowBill } from './view/pages/ShowBill';
+import { Admin } from './view/pages/Admin';
+import { CreateForm } from './view/components/EventDetailsComponents/EventDetails';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -28,7 +31,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div className="App">
-      <Admin />
+      <CreateForm />
     </div>
      </ApolloProvider>
   );
