@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import '../../../src/css/custom.css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 export type TicketProps = {
     number?: string,
