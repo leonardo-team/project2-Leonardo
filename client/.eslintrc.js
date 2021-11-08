@@ -15,6 +15,7 @@ module.exports = {
     'no-console': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'comma-dangle': ['error', 'only-multiline'],
     'linebreak-style': 0,
     'object-curly-newline': [
       'error',
