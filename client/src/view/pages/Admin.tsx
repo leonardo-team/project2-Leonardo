@@ -24,6 +24,5 @@ export const Admin:FC <AdminProps> = ({ path }) =>{
           <Footer />
         </section>
       </main>
-
   </div>;
 };
