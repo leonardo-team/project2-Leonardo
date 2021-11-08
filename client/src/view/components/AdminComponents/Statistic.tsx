@@ -3,7 +3,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-console */
 import { FC } from 'react';
-import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
+import '../../../css/custom.css';
 import { EventBlock } from './EventBlock';
 
 const statistic: Record<string, number> = {

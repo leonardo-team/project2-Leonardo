@@ -1,6 +1,9 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import '../../../src/css/custom.css';
 import 'materialize-css/dist/css/materialize.css';
+import avatar from '../assets/img/avatar04.png';
+import image from '../assets/img/photo1.png';
 
 export type SideMenuProps = {
   path?:string
@@ -16,9 +19,9 @@ export const SideMenu:FC<SideMenuProps> = ({ path })=>{
         <li>
           <div className='userView'>
             <div className='background'>
-              <img src='assets/img/photo1.png'/>
+              <img src={image}/>
             </div>
-            <a href='#!user'><img className='circle' src='assets/img/avatar04.png'/></a>
+            <a href='#!user'><img className='circle' src={avatar}/></a>
             <a href='#!name'><span className='white-text name'>Welcome back,</span></a>
             <a href='#!email'><span className='white-text email'>user!</span></a>
           </div>
@@ -38,8 +41,7 @@ export const SideMenu:FC<SideMenuProps> = ({ path })=>{
         <li><a className='subheader'>Management</a></li>
         <li><Link to={'/ShowBill.tsx'}><i className='material-icons pink-item'>note_add</i>Новое событие</Link></li>
         <li>
-          <i className="fas fa-ticket-alt"></i>Билеты
-        </li>
+          <i className="fas fa-ticket-alt"></i>Билеты</li>
       </ul>
       ) }
       {
@@ -49,9 +51,9 @@ export const SideMenu:FC<SideMenuProps> = ({ path })=>{
         <li>
           <div className='userView'>
             <div className='background'>
-              <img src='assets/img/photo1.png'/>
+              <img src={image}/>
             </div>
-            <a href='#!user'><img className='circle' src='assets/img/avatar04.png'/></a>
+            <a href='#!user'><img className='circle' src={avatar}/></a>
             <a href='#!name'><span className='white-text name'>Welcome back,</span></a>
             <a href='#!email'><span className='white-text email'>user!</span></a>
           </div>
@@ -78,9 +80,9 @@ path === '/Control.tsx'
         <li>
           <div className='userView'>
             <div className='background'>
-              <img src='assets/img/photo1.png'/>
+              <img src={image}/>
             </div>
-            <a href='#!user'><img className='circle' src='assets/img/avatar04.png'/></a>
+            <a href='#!user'><img className='circle' src={avatar}/></a>
             <a href='#!name'><span className='white-text name'>Welcome back,</span></a>
             <a href='#!email'><span className='white-text email'>user!</span></a>
           </div>

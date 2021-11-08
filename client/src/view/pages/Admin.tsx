@@ -1,4 +1,4 @@
-import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
+import '../../../src/css/custom.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import { Statistic } from '../components/AdminComponents/Statistic';
 import { Footer } from '../components/Footer';
@@ -14,8 +14,8 @@ export type AdminProps = {
 
 export const Admin:FC <AdminProps> = ({ path }) =>{
   return <div className="admin">
-    <body>
-      <SideMenu />
+
+      <SideMenu path={path}/>
       <main>
         <section className='content'>
           <Header path={path}/>
@@ -24,6 +24,5 @@ export const Admin:FC <AdminProps> = ({ path }) =>{
           <Footer />
         </section>
       </main>
-    </body>
   </div>;
 };
