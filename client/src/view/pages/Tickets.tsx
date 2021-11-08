@@ -18,7 +18,7 @@ export const Tickets: FC<TicketsProps> = ({ path }) => {
         <main>
           <section className='content'>
             <Header path={path} />
-            <TicketsQuantityContain />
+            <TicketsQuantityContain EventName='Название мероприятия' />
             <Footer />
           </section>
         </main>
