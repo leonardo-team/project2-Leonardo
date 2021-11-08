@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.css';
-import '../assets/css/custom.css';
 
 export type SideMenuProps = {
   path?:string
