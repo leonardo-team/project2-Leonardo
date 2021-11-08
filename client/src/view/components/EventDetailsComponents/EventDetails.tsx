@@ -1,7 +1,5 @@
 import { FC, useCallback, useRef, useState } from 'react';
 import 'materialize-css/dist/css/materialize.css';
-// import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-// import 'https://use.fontawesome.com/releases/v5.6.1/css/all.css';
 
 const EVENTSTATUS = ['Планируется', 'Отменено', 'Прошло'];
 const EMPTY_FORM = {
