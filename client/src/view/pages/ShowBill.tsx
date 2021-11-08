@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { CreateForm } from '../components/EventDetailsComponents/EventDetails';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import SideMenu from '../components/SideMenu';
@@ -15,7 +16,7 @@ export const ShowBill:FC<ShowBillProps> = ({ path })=>{
       <main>
         <section className='content'>
           <Header path={path}/>
-          <div>Тут что-то что сделает Полина</div>
+          <CreateForm />
           <Footer />
         </section>
       </main>
