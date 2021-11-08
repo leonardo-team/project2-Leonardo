@@ -3,6 +3,7 @@ import { CreateForm } from '../components/EventDetailsComponents/EventDetails';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import SideMenu from '../components/SideMenu';
+import '../../../src/css/custom.css';
 
 export type ShowBillProps = {
   path?:string
@@ -11,8 +12,8 @@ export type ShowBillProps = {
 export const ShowBill:FC<ShowBillProps> = ({ path })=>{
   return (
     <div className="showBill">
-      <body>
-      <SideMenu />
+
+      <SideMenu path={path}/>
       <main>
         <section className='content'>
           <Header path={path}/>
@@ -20,7 +21,7 @@ export const ShowBill:FC<ShowBillProps> = ({ path })=>{
           <Footer />
         </section>
       </main>
-    </body>
+
     </div>
   );
 };
