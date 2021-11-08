@@ -1,4 +1,12 @@
+import { FC } from 'react';
 import { Ticket } from './Ticket';
+import '../../../src/css/custom.css';
+import 'materialize-css/dist/css/materialize.min.css';
+
+export type TicketsQuantityContainProps = {
+  path?:string
+}
+
 const tickets = [
   {
     id: '1',
@@ -42,7 +50,7 @@ const tickets = [
   }
 ];
 
-export const TicketsQuantityContain = () => {
+export const TicketsQuantityContain:FC<TicketsQuantityContainProps> = ({ path }) => {
   const ticketsArr = tickets.map(ticket => {
     return <Ticket key={ticket.id} number={ticket.number} />;
   });
