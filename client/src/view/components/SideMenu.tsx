@@ -1,5 +1,9 @@
 import react from 'react';
 
+import { Link } from 'react-router-dom';
+
+
+
 import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
 
 import 'materialize-css/dist/css/materialize.css';
@@ -29,13 +33,13 @@ export function SideMenu() {
       </form>
     </li>
 
-    <li><a className='active' href='index.html'><i className='material-icons pink-item'>dashboard</i>События</a></li>
+    <li><Link className='active' to={'/'}><i className='material-icons pink-item'>dashboard</i>События</Link></li>
     <li>
       <div className='divider'></div>
     </li>
 
     <li><a className='subheader'>Management</a></li>
-    <li><a href='eventdetails.html'><i className='material-icons pink-item'>note_add</i>Новое событие</a></li>
+    <li><Link to={'/ShowBill.tsx'}><i className='material-icons pink-item'>note_add</i>Новое событие</Link></li>
 
     <li><a href='eventdetails.html'>
       <i className="fas fa-ticket-alt"></i>Билеты</a>

@@ -5,6 +5,7 @@ import { offsetLimitPagination } from '@apollo/client/utilities';
 import { Admin } from './view/pages/Admin';
 
 import './App.css';
+import Routing from './view/components/routing';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -27,7 +28,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div className="App">
-      <Admin />
+      <Routing />
     </div>
      </ApolloProvider>
   );

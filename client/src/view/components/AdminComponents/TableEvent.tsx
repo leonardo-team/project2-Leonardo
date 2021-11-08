@@ -48,7 +48,7 @@ const eventString = eventsData.map((item, i)=> <EventString
 export const TableEvents = ()=>{
   return (
         <div className="TableEvents">
-                <h3 className='center-align'>Сюда будем выводить список событий</h3>
+                <h3 className='center-align'>Список Событий</h3>
                 <div className='custom-responsive'>
                     <table className='striped hover centered'>
                         <thead>
