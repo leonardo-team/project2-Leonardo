@@ -25,19 +25,5 @@ export const Admin:FC <AdminProps> = ({ path }) =>{
         </section>
       </main>
     </body>
-
-
-export function Admin() {
-  return <div className="admin">
-
-    <Header />
-    <SideMenu />
-    <Content statistic={{
-      planned: 42,
-      completed: 12,
-      canceled: 13
-    }}/>
-    <Footer />
-
   </div>;
 };
