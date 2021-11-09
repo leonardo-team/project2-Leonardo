@@ -14,7 +14,7 @@ export const Header:FC <HeaderProps> = ({login = "Войти", path})=>{
 
           <div className="Header">
 
-                <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
               <header className="mdl-layout__header">
                 <div className="mdl-layout__header-row">
                   <button id="demo-menu-lower-left" className="mdl-button mdl-js-button mdl-button--icon">

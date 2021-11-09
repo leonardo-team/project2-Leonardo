@@ -28,7 +28,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div className="App">
-      <Routing/>
+
+      <Routing />
+
     </div>
      </ApolloProvider>
   );
