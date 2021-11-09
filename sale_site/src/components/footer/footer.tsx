@@ -9,10 +9,6 @@ export const Footer = ()=>{
                   <div className="mdl-logo">
                     &copy; "Leonardo"
                   </div>
-                  <ul className="mdl-mini-footer__link-list">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Privacy & Terms</a></li>
-                  </ul>
                 </div>
             </footer>
       
