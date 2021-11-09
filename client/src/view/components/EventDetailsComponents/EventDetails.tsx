@@ -12,7 +12,6 @@ const EMPTY_FORM = {
   visited: '',
   image: '',
 };
-
 export const CreateForm: FC = () => {
   const imageRef = useRef<HTMLInputElement>(null);
   const [form, setForm] = useState(EMPTY_FORM);
