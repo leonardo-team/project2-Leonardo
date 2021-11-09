@@ -8,7 +8,6 @@ import image from '../assets/img/photo1.png';
 export type SideMenuProps = {
   path?: string,
 };
-
 export const SideMenu: FC<SideMenuProps> = ({ path }) => {
   return (
     <div className="SideMenu">
