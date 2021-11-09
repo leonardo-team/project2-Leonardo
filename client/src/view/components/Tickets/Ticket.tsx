@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import '../../../src/css/custom.css';
+import '../../../css/custom.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
 export type TicketProps = {
@@ -26,7 +26,13 @@ export const Ticket: FC<TicketProps> = ({ number, encash }) => {
       <div className={bgStyle}>
         <div className="inner">
           <h3>{number}</h3>
-          <button disabled={buttonDisable} type='submit' className={buttonStyle}>-</button>
+          <button
+            disabled={buttonDisable}
+            type="submit"
+            className={buttonStyle}
+          >
+            -
+          </button>
         </div>
       </div>
     </div>

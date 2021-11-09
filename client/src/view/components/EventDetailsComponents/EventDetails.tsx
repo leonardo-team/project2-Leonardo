@@ -60,164 +60,168 @@ export const CreateForm: FC = () => {
   }, []);
 
   return (
-    <main>
-      <div className="container">
-        <form className="user" />
-        <table className="table table-hover" />
-        <tbody>
-          <tr>
-            <input type="hidden" name="pastdata" value="{{ usr.id }}" />
-            <td>
-              <label htmlFor="eventName">Название</label>
-            </td>
-            <td>
-              {' '}
-              <input
-                className="createForm-Control"
-                id="eventName"
-                name="eventName"
-                onChange={inputChangeHandle}
-                value={form.eventName}
-              />
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <label htmlFor="date">Дата проведения</label>
-            </td>
-            <td>
-              {' '}
-              <input
-                id="date"
-                type="date"
-                name="date"
-                onChange={inputChangeHandle}
-              />
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <label className="form-row" htmlFor="image">
+    <div className="container">
+      <form>
+        <table className="table table-hover">
+          <tbody>
+            <tr>
+              <input type="hidden" name="pastdata" value="{{ usr.id }}" />
+              <td>
+                <label htmlFor="eventName">Название</label>
+              </td>
+              <td>
                 {' '}
-                Афиша мероприятия{' '}
-              </label>
-            </td>
-            <td>
-              <img className="custom-file-input" src={form.image} alt="image" />
-            </td>
-            <td>
-              <input
-                ref={imageRef}
-                type="file"
-                id="image"
-                name="image"
-                onChange={imageUploadHandle}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label htmlFor="eventDescription">Описание</label>
-            </td>
-            <td>
-              {' '}
-              <textarea
-                id="eventDescription"
-                name="eventDescription"
-                onChange={inputChangeHandle}
-                value={form.eventDescription}
-              />
-            </td>
-          </tr>
+                <input
+                  className="createForm-Control"
+                  id="eventName"
+                  name="eventName"
+                  onChange={inputChangeHandle}
+                  value={form.eventName}
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              <label htmlFor=" eventStatus">Статус мероприятия</label>
-            </td>
-            <td>
-              <select
-                id=" eventStatus"
-                className="form-select"
-                name=" eventStatus"
-                onChange={inputChangeHandle}
-                value={form.eventStatus}
-              >
-                <option value="" selected disabled>
-                  Выберите...
-                </option>
-                {EVENTSTATUS.map(stat => (
-                  <option key={stat} value={stat.toLowerCase()}>
-                    {stat}
+            <tr>
+              <td>
+                <label htmlFor="date">Дата проведения</label>
+              </td>
+              <td>
+                {' '}
+                <input
+                  id="date"
+                  type="date"
+                  name="date"
+                  onChange={inputChangeHandle}
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label className="form-row" htmlFor="image">
+                  {' '}
+                  Афиша мероприятия{' '}
+                </label>
+              </td>
+              <td>
+                <img
+                  className="custom-file-input"
+                  src={form.image}
+                  alt="image"
+                />
+              </td>
+              <td>
+                <input
+                  ref={imageRef}
+                  type="file"
+                  id="image"
+                  name="image"
+                  onChange={imageUploadHandle}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label htmlFor="eventDescription">Описание</label>
+              </td>
+              <td>
+                {' '}
+                <textarea
+                  id="eventDescription"
+                  name="eventDescription"
+                  onChange={inputChangeHandle}
+                  value={form.eventDescription}
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label htmlFor=" eventStatus">Статус мероприятия</label>
+              </td>
+              <td>
+                <select
+                  id=" eventStatus"
+                  className="form-select"
+                  name=" eventStatus"
+                  onChange={inputChangeHandle}
+                  value={form.eventStatus}
+                >
+                  <option value="" selected disabled>
+                    Выберите...
                   </option>
-                ))}
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label htmlFor="ticketsNumber">Количество билетов</label>
-            </td>
-            <td>
-              <input
-                id="ticketsNumber"
-                name="ticketsNumber"
-                type="number"
-                onChange={inputChangeHandle}
-                value={form.ticketsNumber}
-              />
-            </td>
-          </tr>
+                  {EVENTSTATUS.map(stat => (
+                    <option key={stat} value={stat.toLowerCase()}>
+                      {stat}
+                    </option>
+                  ))}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label htmlFor="ticketsNumber">Количество билетов</label>
+              </td>
+              <td>
+                <input
+                  id="ticketsNumber"
+                  name="ticketsNumber"
+                  type="number"
+                  onChange={inputChangeHandle}
+                  value={form.ticketsNumber}
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              <label htmlFor="ticketsNumber">Реализовано билетов</label>
-            </td>
-            <td>
-              <input
-                id="encashTickets"
-                name="encashTickets"
-                type="number"
-                onChange={inputChangeHandle}
-                value={form.ticketsNumber}
-              />
-            </td>
-          </tr>
+            <tr>
+              <td>
+                <label htmlFor="ticketsNumber">Реализовано билетов</label>
+              </td>
+              <td>
+                <input
+                  id="encashTickets"
+                  name="encashTickets"
+                  type="number"
+                  onChange={inputChangeHandle}
+                  value={form.ticketsNumber}
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              <label htmlFor="ticketsNumber">Реальных посетителей</label>
-            </td>
-            <td>
-              <input
-                className="createForm-Control"
-                id="visited"
-                name="visited"
-                type="number"
-                onChange={inputChangeHandle}
-                value={form.visited}
-              />
-            </td>
-          </tr>
-          <div>
-            <button
-              className="btn waves-effect waves-teal"
-              type="submit"
-              onClick={formSubmitHandle}
-            >
-              Создать
-            </button>
-            <button
-              className="btn waves-effect waves-light red"
-              type="button"
-              onClick={formClearHandle}
-            >
-              Отмена
-            </button>
-          </div>
-        </tbody>
-      </div>
-    </main>
+            <tr>
+              <td>
+                <label htmlFor="ticketsNumber">Реальных посетителей</label>
+              </td>
+              <td>
+                <input
+                  className="createForm-Control"
+                  id="visited"
+                  name="visited"
+                  type="number"
+                  onChange={inputChangeHandle}
+                  value={form.visited}
+                />
+              </td>
+            </tr>
+            <div className="btn-wrapper">
+              <button
+                className="btn waves-effect waves-light red"
+                type="button"
+                onClick={formClearHandle}
+              >
+                Отмена
+              </button>
+              <button
+                className="btn waves-effect waves-teal"
+                type="submit"
+                onClick={formSubmitHandle}
+              >
+                Создать
+              </button>
+            </div>
+          </tbody>
+        </table>
+      </form>
+    </div>
   );
 };

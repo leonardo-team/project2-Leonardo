@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import SideMenu from '../components/SideMenu';
-import { TicketsQuantityContain } from '../components/TicketsQuantityContain';
+import { TicketsQuantityContain } from '../components/Tickets/TicketsQuantityContain';
 import '../../../src/css/custom.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
@@ -14,11 +14,11 @@ export const Tickets: FC<TicketsProps> = ({ path }) => {
   return (
     <div className="Tickets">
       <body>
-        <SideMenu path={path}/>
+        <SideMenu path={path} />
         <main>
-          <section className='content'>
+          <section className="content">
             <Header path={path} />
-            <TicketsQuantityContain EventName='Название мероприятия' />
+            <TicketsQuantityContain eventName="Название мероприятия" />
             <Footer />
           </section>
         </main>
