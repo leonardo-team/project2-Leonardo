@@ -14,6 +14,7 @@ export type AdminProps = {
 
 export const Admin:FC <AdminProps> = ({ path }) =>{
   return <div className="admin">
+
       <SideMenu path={path}/>
       <main>
         <section className='content'>
