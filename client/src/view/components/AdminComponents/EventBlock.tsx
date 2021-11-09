@@ -1,5 +1,6 @@
 import { FC } from 'react';
-// import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
+
+import '../../../css/custom.css';
 
 export type EventBlockProps = {
   title?:string

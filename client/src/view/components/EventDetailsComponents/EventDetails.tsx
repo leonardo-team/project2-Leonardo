@@ -1,5 +1,6 @@
 import { FC, useCallback, useRef, useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
+import '../../../css/custom.css';
 
 const EVENTSTATUS = ['Планируется', 'Отменено', 'Прошло'];
 const EMPTY_FORM = {
@@ -110,7 +111,7 @@ export const CreateForm: FC = () => {
 
           <tr>
           <td><label htmlFor=" eventStatus">Статус мероприятия</label></td>
-          <td><select
+            <td><select
           id=" eventStatus"
           name=" eventStatus"
           onChange={inputChangeHandle}

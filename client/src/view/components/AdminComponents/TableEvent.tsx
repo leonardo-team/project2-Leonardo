@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { FC } from 'react';
-// import '/Frontend/education/HomeWork/FinalProject/project2-Leonardo/client/src/css/custom.css';
+import '../../../css/custom.css';
+
 import 'materialize-css/dist/css/materialize.min.css';
 import { EventBlock } from './EventBlock';
 import { EventString } from './EventString';
