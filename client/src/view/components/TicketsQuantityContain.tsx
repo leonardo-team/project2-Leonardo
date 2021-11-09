@@ -1,4 +1,12 @@
+import { FC } from 'react';
 import { Ticket } from './Ticket';
+import '../../../src/css/custom.css';
+import 'materialize-css/dist/css/materialize.min.css';
+
+export type TicketsQuantityContainProps = {
+  EventName?: string,
+};
+
 const tickets = [
   {
     id: '1',
@@ -28,7 +36,7 @@ const tickets = [
   {
     id: '6',
     number: '006',
-    encash: true
+    encash: false
   },
   {
     id: '7',
@@ -38,17 +46,21 @@ const tickets = [
   {
     id: '8',
     number: '008',
-    encash: true
+    encash: false
   }
 ];
 
-export const TicketsQuantityContain = () => {
+export const TicketsQuantityContain: FC<TicketsQuantityContainProps> = ({ EventName }) => {
   const ticketsArr = tickets.map(ticket => {
-    return <Ticket key={ticket.id} number={ticket.number} />;
+    return (
+      <Ticket key={ticket.id} number={ticket.number} encash={ticket.encash} />
+    );
   });
   return (
     <div>
-      <h3 className="center-align">Что-то</h3>
+      <div className="row">
+        <h3 className="center-align">{EventName}</h3>
+        </div>
       <div className="row">{ticketsArr}</div>
     </div>
   );

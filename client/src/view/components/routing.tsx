@@ -5,6 +5,7 @@ import { BrowserRouter as Router,
   Link } from 'react-router-dom';
 import { Admin } from '../pages/Admin';
 import { ShowBill } from '../pages/ShowBill';
+import { Tickets } from '../pages/Tickets';
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/ShowBill.tsx',
     sidebar: () => <ShowBill path={'/ShowBill.tsx'}/>
+  },
+  {
+    path: '/Tickets.tsx',
+    sidebar: () => <Tickets path={'/Tickets.tsx'}/>
   }
 ];
 
