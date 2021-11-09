@@ -45,10 +45,6 @@ main {
     flex: 1 0 auto;
 }
 
-.material-tooltip {
-    display: hidden;
-}
-
 .bg-aqua {
     background-color: #00c0ef !important;
 }
@@ -82,12 +78,13 @@ main {
 }
 
 .small-box h3 {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0 0 10px 0;
     white-space: nowrap;
     padding: 0;
     color: #fff;
+    text-align: left;
 }
 
 .small-box p {
@@ -221,6 +218,11 @@ div.quick-links a {
     display: block !important;
 }
 
+.btn-wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
 @media (max-width: 320px) {
     .page-announce {
         min-height: 40px;
@@ -272,7 +274,10 @@ div.quick-links a {
 }
 
 .btn {
-    position: relative;
-    left: 50%;
     margin-left: 12px !important;
+}
+
+.btn-wrapper {
+    position: relative;
+    left: 100%;
 }

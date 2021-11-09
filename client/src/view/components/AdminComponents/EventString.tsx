@@ -2,99 +2,43 @@ import { FC } from 'react';
 import '../../../css/custom.css';
 
 export type EventStringProps = {
-  title?:string
-  date?:string
-  ticket?:number
-  status?:string
+  title?: string
+  date?: string
+  ticket?: number
+  status?: string
 }
 
-export const EventString:FC<EventStringProps> = ({ title, date, ticket, status })=>{
+export const EventString: FC<EventStringProps> = ({ title, date, ticket, status }) => {
+  let iClassName;
+
+  switch (status) {
+    case 'check':
+      iClassName = 'fas fa-check green-item';
+      break;
+    case 'close':
+      iClassName = 'far fa-times-circle pink-item';
+      break;
+    default:
+      iClassName = 'fas fa-hourglass-half green-item';
+  }
+
   return (
+    <tr>
+      <td>{title}</td>
+      <td>{date}</td>
+      <td>{ticket}</td>
+      <td>
+        <i className={iClassName}> </i>
+      </td>
+      <td>
+        <button className='btn green'>
+          <i className='material-icons'>done</i>
+        </button>
 
-        <tr>
-        {
-         status === 'check'
-         && (
-        <>
-        <td>{title}</td>
-        <td>{date}</td>
-        <td>{ticket}</td>
-        <td>
-            <i className='text-green material-icons green-item'>check</i>
-        </td>
-        <td>
-            <div className='btn-toolbar'>
-
-                    <button className='btn green' type='submit'>
-                        <a href='eventdetails.html'>
-                            <i className='material-icons'>done</i>
-                        </a>
-                    </button>
-
-                <a href='#'>
-                    <button className='btn red' type='submit'>
-                        <i className='material-icons'>remove</i>
-                    </button>
-                </a>
-            </div>
-        </td>
-
-        </>)
-        }
-        {
-         status === 'close'
-         && (
-        <>
-        <td>{title}</td>
-        <td>{date}</td>
-        <td>{ticket}</td>
-        <td><i className='text-red material-icons pink-item'>close</i></td>
-        <td>
-            <div className='btn-toolbar'>
-
-                    <button className='btn green' type='submit'>
-                        <a href='eventdetails.html'>
-                            <i className='material-icons'>done</i>
-                        </a>
-                    </button>
-
-                <a href='#'>
-                    <button className='btn red' type='submit'>
-                        <i className='material-icons'>remove</i>
-                    </button>
-                </a>
-            </div>
-        </td>
-
-        </>)
-        }
-        {
-         status === 'planned'
-         && (
-        <>
-        <td>{title}</td>
-        <td>{date}</td>
-        <td>{ticket}</td>
-        <td><i className='fas fa-hourglass-half green-item'></i></td>
-        <td>
-            <div className='btn-toolbar'>
-
-                    <button className='btn green' type='submit'>
-                        <a href='eventdetails.html'>
-                            <i className='material-icons'>done</i>
-                        </a>
-                    </button>
-
-                <a href='#'>
-                    <button className='btn red' type='submit'>
-                        <i className='material-icons'>remove</i>
-                    </button>
-                </a>
-            </div>
-        </td>
-
-        </>)
-        }
+        <button className='btn red'>
+          <i className='material-icons'>remove</i>
+        </button>
+      </td>
     </tr>
 
   );

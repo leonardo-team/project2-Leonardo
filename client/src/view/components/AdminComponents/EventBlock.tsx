@@ -3,92 +3,54 @@ import { FC } from 'react';
 import '../../../css/custom.css';
 
 export type EventBlockProps = {
-  title?:string
-  stat?:number
+  title?: string
+  stat?: number
 }
 
-export const EventBlock:FC<EventBlockProps> = ({ title, stat })=>{
+export const EventBlock: FC<EventBlockProps> = ({ title, stat }) => {
+  let eventTitle;
+  let eventStyle;
+  let eventIcon;
+  switch (title) {
+    case 'planned':
+      eventTitle = 'Предстоящих мероприятий';
+      eventStyle = 'small-box bg-yellow';
+      eventIcon = 'far fa-calendar-check';
+      break;
+
+    case 'completed':
+      eventTitle = 'Проведенных мероприятий';
+      eventStyle = 'small-box bg-green';
+      eventIcon = 'fas fa-sign-language';
+      break;
+
+    case 'canceled':
+      eventTitle = 'Отмененных мероприятий';
+      eventStyle = 'small-box bg-red';
+      eventIcon = 'fas fa-microphone-alt-slash';
+      break;
+
+    default:
+      eventTitle = 'Всего мероприятий';
+      eventStyle = 'small-box bg-aqua';
+      eventIcon = 'fas fa-chart-pie';
+  }
+
   return (
-  <div className="EventBlock">
-  {
-    title === 'planned'
-    && (
     <div className='col l3 s6'>
-      <div className='small-box bg-yellow'>
-          <div className='inner'>
-              <h3>{stat}</h3>
-              <p>Предстоящих мероприятий</p>
-          </div>
-          <div className='icon'>
-              <i className='far fa-calendar-check'></i>
-          </div>
-          <a href='#' className='small-box-footer animsition-link'>More info
-              <i className='fa fa-arrow-circle-down'></i>
-          </a>
-      </div>
-    </div>
-
-    )
-}
-{
-    title === 'completed'
-    && (
-    <div className='col l3 s6'>
-      <div className='small-box bg-green'>
+      <div className={eventStyle}>
         <div className='inner'>
-            <h3>{stat}</h3>
-            <p>Проведенных мероприятий</p>
+          <h3>{stat}</h3>
+          <p>{eventTitle}</p>
         </div>
         <div className='icon'>
-            <i className='fas fa-sign-language'></i>
+          <i className={eventIcon}> </i>
         </div>
-        <a href='#' className='small-box-footer animsition-link'>More info
-            <i className='fa fa-arrow-circle-down'></i>
-        </a>
+        <div className='small-box-footer animsition-link'>More info
+          <i className='fa fa-arrow-circle-down'> </i>
+        </div>
       </div>
     </div>
-    )
-}
-{
-    title === 'canceled'
-    && (
-    <div className='col l3 s6'>
-      <div className='small-box bg-red'>
-          <div className='inner'>
-              <h3>{stat}</h3>
-              <p>Отмененных мероприятий</p>
-          </div>
-          <div className='icon'>
-              <i className='fas fa-microphone-alt-slash'></i>
-          </div>
-          <a href='#' className='small-box-footer animsition-link'>More info
-              <i className='fa fa-arrow-circle-down'></i>
-          </a>
-      </div>
-    </div>
-    )
-}
-{
-    title === 'allEvents'
-    && (
-    <div className='col l3 s6'>
-      <div className='small-box bg-aqua'>
-          <div className='inner'>
-              <h3>{stat}</h3>
-              <p>Всего мероприятий</p>
-          </div>
-          <div className='icon'>
-              <i className="fas fa-chart-pie"></i>
-          </div>
-          <a href='#' className='small-box-footer animsition-link'>
-              More info
-              <i className='fa fa-arrow-circle-down'></i>
-          </a>
-      </div>
-    </div>
-    )
-}
-  </div>
 
   );
 };
