@@ -1,4 +1,5 @@
 import '../../css/custom.css';
+
 export const Footer = ()=>{
   return (
     <div className="Footer">

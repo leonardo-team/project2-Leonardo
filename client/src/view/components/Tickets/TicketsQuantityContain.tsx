@@ -1,62 +1,64 @@
 import { FC } from 'react';
 import { Ticket } from './Ticket';
-import '../../../src/css/custom.css';
+import '../../../css/custom.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
 export type TicketsQuantityContainProps = {
-  path?:string
-}
+  eventName?: string,
+};
 
 const tickets = [
   {
     id: '1',
     number: '001',
-    encash: true
+    encash: true,
   },
   {
     id: '2',
     number: '002',
-    encash: true
+    encash: true,
   },
   {
     id: '3',
     number: '003',
-    encash: true
+    encash: true,
   },
   {
     id: '4',
     number: '004',
-    encash: true
+    encash: true,
   },
   {
     id: '5',
     number: '005',
-    encash: true
+    encash: true,
   },
   {
     id: '6',
     number: '006',
-    encash: true
+    encash: false,
   },
   {
     id: '7',
     number: '007',
-    encash: true
+    encash: true,
   },
   {
     id: '8',
     number: '008',
-    encash: true
-  }
+    encash: false,
+  },
 ];
 
-export const TicketsQuantityContain:FC<TicketsQuantityContainProps> = ({ path }) => {
+export const TicketsQuantityContain: FC<TicketsQuantityContainProps> = ({ eventName }) => {
   const ticketsArr = tickets.map(ticket => {
-    return <Ticket key={ticket.id} number={ticket.number} />;
+    return <Ticket key={ticket.id} number={ticket.number} encash={ticket.encash} />;
   });
   return (
     <div>
-      <h3 className="center-align">Что-то</h3>
+      <div className="row">
+        <h3 className="center-align">{eventName}</h3>
+      </div>
       <div className="row">{ticketsArr}</div>
     </div>
   );

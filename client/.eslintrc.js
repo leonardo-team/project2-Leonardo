@@ -15,14 +15,20 @@ module.exports = {
     'no-console': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'comma-dangle': ['error', 'only-multiline'],
     'linebreak-style': 0,
     'object-curly-newline': [
       'error',
       {
         ObjectExpression: 'always',
-        ObjectPattern: { multiline: true },
+        ObjectPattern: {
+          multiline: true,
+        },
         ImportDeclaration: 'never',
-        ExportDeclaration: { multiline: true, minProperties: 3 },
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 3,
+        },
       },
     ],
   },

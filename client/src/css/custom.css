@@ -1,4 +1,5 @@
 @media (min-width: 993px) {
+
     main,
     footer {
         padding-left: 300px;
@@ -44,10 +45,6 @@ main {
     flex: 1 0 auto;
 }
 
-.material-tooltip {
-    display: hidden;
-}
-
 .bg-aqua {
     background-color: #00c0ef !important;
 }
@@ -76,17 +73,18 @@ main {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.small-box > .inner {
+.small-box>.inner {
     padding: 10px;
 }
 
 .small-box h3 {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0 0 10px 0;
     white-space: nowrap;
     padding: 0;
     color: #fff;
+    text-align: left;
 }
 
 .small-box p {
@@ -105,7 +103,7 @@ main {
     color: rgba(0, 0, 0, 0.15);
 }
 
-.small-box > .small-box-footer {
+.small-box>.small-box-footer {
     position: relative;
     text-align: center;
     padding: 3px 0;
@@ -216,6 +214,15 @@ div.quick-links a {
     color: #fcf8e3;
 }
 
+.form-select {
+    display: block !important;
+}
+
+.btn-wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
 @media (max-width: 320px) {
     .page-announce {
         min-height: 40px;
@@ -264,4 +271,13 @@ div.quick-links a {
     h1.page-announce-text {
         font-size: 32px;
     }
+}
+
+.btn {
+    margin-left: 12px !important;
+}
+
+.btn-wrapper {
+    position: relative;
+    left: 100%;
 }

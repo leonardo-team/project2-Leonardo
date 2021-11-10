@@ -8,12 +8,11 @@ import image from '../assets/img/photo1.png';
 export type SideMenuProps = {
   path?: string,
 };
-
 export const SideMenu: FC<SideMenuProps> = ({ path }) => {
   return (
     <div className="SideMenu">
       {path === '/' && (
-        <ul id="slide-out" className="side-nav fixed z-depth-4">
+        <ul className="side-nav fixed z-depth-4">
           <li>
             <div className="userView">
               <div className="background">
@@ -50,7 +49,7 @@ export const SideMenu: FC<SideMenuProps> = ({ path }) => {
             </Link>
           </li>
           <li>
-            <div className="divider"></div>
+            <div className="divider"> </div>
           </li>
           <li>
             <a className="subheader">Management</a>
@@ -62,13 +61,13 @@ export const SideMenu: FC<SideMenuProps> = ({ path }) => {
           </li>
           <li>
             <Link to={'/Tickets.tsx'}>
-              <i className="fas fa-ticket-alt"></i>Билеты
+              <i className="fas fa-ticket-alt pink-item"> </i>Билеты
             </Link>
           </li>
         </ul>
       )}
       {path === '/ShowBill.tsx' && (
-        <ul id="slide-out" className="side-nav fixed z-depth-4">
+        <ul className="side-nav fixed z-depth-4">
           <li>
             <div className="userView">
               <div className="background">
@@ -115,7 +114,7 @@ export const SideMenu: FC<SideMenuProps> = ({ path }) => {
         </ul>
       )}
       {path === '/Tickets.tsx' && (
-        <ul id="slide-out" className="side-nav fixed z-depth-4">
+        <ul className="side-nav fixed z-depth-4">
           <li>
             <div className="userView">
               <div className="background">
