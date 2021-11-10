@@ -16,22 +16,22 @@ const tickets = [
   {
     id: '2',
     number: '002',
-    encash: true,
+    encash: false,
   },
   {
     id: '3',
     number: '003',
-    encash: true,
+    encash: false,
   },
   {
     id: '4',
     number: '004',
-    encash: true,
+    encash: false,
   },
   {
     id: '5',
     number: '005',
-    encash: true,
+    encash: false,
   },
   {
     id: '6',
@@ -41,7 +41,7 @@ const tickets = [
   {
     id: '7',
     number: '007',
-    encash: true,
+    encash: false,
   },
   {
     id: '8',
