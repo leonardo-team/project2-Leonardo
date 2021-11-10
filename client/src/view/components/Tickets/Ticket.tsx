@@ -32,6 +32,7 @@ export const Ticket: FC<TicketProps> = ({ number, encash }) => {
         <div className="inner">
           <h3>{number}</h3>
           <button disabled={buttonDisable} className={buttonStyle} onClick={handleClick}>
+          >
             -
           </button>
         </div>
