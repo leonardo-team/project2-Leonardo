@@ -15,6 +15,7 @@ const { GraphQLDateTime } = require('graphql-iso-date');
 
 const Events = require('../models/event');
 const Tickets = require('../models/ticket');
+const Statistic = require('../models/statistic');
 
 const TicketType = new GraphQLObjectType({
   name: 'Ticket',
@@ -75,6 +76,16 @@ const PaginatedListType = ItemType =>
     },
   });
 
+const StatisticType = new GraphQLObjectType({
+  name: 'Statistic',
+  fields: () => ({
+    id: { type: GraphQLID },
+    planned: { type: new GraphQLNonNull(GraphQLInt) },
+    completed: { type: new GraphQLNonNull(GraphQLInt) },
+    canceled: { type: new GraphQLNonNull(GraphQLInt) },
+  }),
+});
+
 const Query = new GraphQLObjectType({
   name: 'Query',
   fields: {
@@ -119,6 +130,21 @@ const Query = new GraphQLObjectType({
       type: new GraphQLList(TicketType),
       resolve(parent, { number }) {
         return Tickets.find({ number: { $regex: number, $options: 'i' } });
+      },
+    },
+
+    statistic: {
+      type: StatisticType,
+      args: { id: { type: GraphQLID } },
+      resolve(_, { id }) {
+        return Statistic.findById(id);
+      },
+    },
+
+    statistics: {
+      type: new GraphQLList(StatisticType),
+      resolve(parent, args) {
+        return Statistic.find({});
       },
     },
   },
@@ -261,6 +287,29 @@ const Mutation = new GraphQLObjectType({
               number,
               encash,
               eventId,
+            },
+          },
+          { new: true },
+        );
+      },
+    },
+
+    updateStatistic: {
+      type: StatisticType,
+      args: {
+        id: { type: GraphQLID },
+        planned: { type: new GraphQLNonNull(GraphQLInt) },
+        completed: { type: new GraphQLNonNull(GraphQLInt) },
+        canceled: { type: new GraphQLNonNull(GraphQLInt) },
+      },
+      resolve(_, { id, planned, completed, canceled }) {
+        return Statistic.findByIdAndUpdate(
+          id,
+          {
+            $set: {
+              planned,
+              completed,
+              canceled,
             },
           },
           { new: true },
