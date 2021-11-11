@@ -30,7 +30,7 @@ import { LoginHome } from './login_home/login_home';
       sidebar: () =>
       <div className="Main">
             <Header login="Зарегистрироваться" path="/registration.tsx"/>
-            <Login path="/login_home.tsx"/>
+            <LoginForm path="/login_home.tsx"/>
             <Footer />
         </div>
     },

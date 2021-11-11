@@ -6780,6 +6780,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 20px;
 }
 .Login_page {
 	display: flex;
@@ -6792,9 +6793,26 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .Login_page-login {
 	max-width: 150px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border-color: #0ea0ad;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .Login_page-password {
 	max-width: 150px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border-color: #0ea0ad;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+	
 }
 .Home {
 	display: flex;
