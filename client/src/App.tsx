@@ -9,10 +9,7 @@ const cache = new InMemoryCache({
   typePolicies: {
     Query: {
       fields: {
-        event: offsetLimitPagination(),
         events: offsetLimitPagination(),
-        ticket: offsetLimitPagination(),
-        tickets: offsetLimitPagination(),
       },
     },
   },
