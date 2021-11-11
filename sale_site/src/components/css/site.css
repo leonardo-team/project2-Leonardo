@@ -6806,3 +6806,24 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .my_card:hover .my_button {
 	display: block;
 }
+.Register-Login {
+	margin-top: 75px;
+}
+.RegisterForm {
+	margin-left:250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.RegisterForm {
+	display: inline-block;
+}
+.RegisterForm-Field {
+	max-width: 150px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+}
+.RegisterForm__Button-Block {
+	margin-bottom: 20px;
+}
