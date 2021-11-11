@@ -34,6 +34,7 @@ export const DELETE_EVENT_MUTATION = gql`
 
 export const UPDATE_EVENT_MUTATION = gql`
   mutation updateEvent(
+    $id: ID
     $title: String!
     $description: String
     $date: Date!
@@ -43,6 +44,7 @@ export const UPDATE_EVENT_MUTATION = gql`
     $visited: Int!
   ) {
     updateEvent(
+      id: $id
       title: $title
       description: $description
       date: $date
