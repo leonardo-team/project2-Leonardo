@@ -17,12 +17,7 @@ export const DELETE_TICKET_MUTATION = gql`
 `;
 
 export const UPDATE_TICKET_MUTATION = gql`
-  mutation updateTicket(
-    $id: ID
-    $number: String!
-    $encash: Boolean!
-    $eventId: ID
-  ) {
+  mutation updateTicket($id: ID, $number: String!, $encash: Boolean!, $eventId: ID) {
     updateTicket(id: $id, number: $number, encash: $encash, eventId: $eventId) {
       number
     }
