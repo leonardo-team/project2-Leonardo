@@ -1,7 +1,6 @@
 import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { offsetLimitPagination } from '@apollo/client/utilities';
-import { observer } from 'mobx-react-lite';
 
 import './App.css';
 import Routing from './view/components/routing';
