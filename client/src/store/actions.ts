@@ -1,5 +1,6 @@
 import { StatisticType, EventType, TicketType } from '../types';
 
+
 export const actions = {
   getStatistic: (statObj: StatisticType) => ({
     type: 'GET_SITE_STATISTIC',

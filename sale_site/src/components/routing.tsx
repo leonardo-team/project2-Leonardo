@@ -9,7 +9,7 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import { Home } from './home/home';
 import { Login } from './login/login';
-import { Registration } from './registration/registration';
+import { RegisterForm } from './registration/registration';
 import '../components/css/site.css'
 import { DetailEvents } from './detail_events/detail_events';
 import { LoginHome } from './login_home/login_home';
@@ -30,7 +30,7 @@ import { LoginHome } from './login_home/login_home';
       sidebar: () =>
       <div className="Main">
             <Header login="Зарегистрироваться" path="/registration.tsx"/>
-            <Login path="/login_home.tsx"/>
+            <LoginForm path="/login_home.tsx"/>
             <Footer />
         </div>
     },
@@ -39,7 +39,7 @@ import { LoginHome } from './login_home/login_home';
       sidebar: () =>
       <div className="Main">
             <Header login="На главную" path="/"/>
-            <Registration />
+            <RegisterForm />
             <Footer />
         </div>
     },
