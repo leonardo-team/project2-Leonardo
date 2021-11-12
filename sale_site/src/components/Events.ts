@@ -1,4 +1,4 @@
-export const events = [
+export const Events = [
     { 
     "eventName":"Концерт",
     "eventDate":"30.11.2021",
