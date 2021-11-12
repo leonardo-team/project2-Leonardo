@@ -1,46 +1,30 @@
-/* eslint-disable max-len */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-console */
 import { FC } from 'react';
 import { EventBlock } from './EventBlock';
+import { StatisticType } from '../../../types';
 
-const statistic: Record<string, number> = {
-  planned: 14,
-  completed: 12,
-  canceled: 23
-};
-
-export const Statistic = ()=>{
+export const Statistic: FC<StatisticType> = ({ planned, completed, canceled }) => {
   const arrayEvents = [
     {
       title: 'planned',
-      stat: 0
+      stat: planned,
     },
     {
       title: 'completed',
-      stat: 0
+      stat: completed,
     },
     {
       title: 'canceled',
-      stat: 0
+      stat: canceled,
     },
     {
       title: 'allEvents',
-      stat: 0
-    }
+      stat: planned + completed + canceled,
+    },
   ];
 
-  arrayEvents.forEach((item)=>{
-    if (!statistic[item.title]) {
-      item.stat = statistic.planned + statistic.completed + statistic.canceled;
-    } else { item.stat = statistic[item.title]; }
-  });
+  const eventBlock = arrayEvents.map((item, i) => (
+    <EventBlock key={i} title={item.title} stat={item.stat} />
+  ));
 
-  const eventBlock = arrayEvents.map((item, i) => <EventBlock key={i} title={item.title} stat={item.stat}/>);
-
-  return (
-    <div className='row'>
-      {eventBlock}
-    </div>);
+  return <div className="row">{eventBlock}</div>;
 };

@@ -1,21 +1,15 @@
 import { FC } from 'react';
 import '../../../css/custom.css';
+import { EventStringType } from '../../../types';
 
-export type EventStringProps = {
-  title?: string
-  date?: string
-  ticket?: number
-  status?: string
-}
-
-export const EventString: FC<EventStringProps> = ({ title, date, ticket, status }) => {
+export const EventString: FC<EventStringType> = ({ title, date, tickets, status }) => {
   let iClassName;
 
   switch (status) {
-    case 'check':
+    case 'completed':
       iClassName = 'fas fa-check green-item';
       break;
-    case 'close':
+    case 'canceled':
       iClassName = 'far fa-times-circle pink-item';
       break;
     default:
@@ -26,20 +20,19 @@ export const EventString: FC<EventStringProps> = ({ title, date, ticket, status 
     <tr>
       <td>{title}</td>
       <td>{date}</td>
-      <td>{ticket}</td>
+      <td>{tickets}</td>
       <td>
         <i className={iClassName}> </i>
       </td>
       <td>
-        <button className='btn green'>
-          <i className='material-icons'>done</i>
+        <button className="btn green">
+          <i className="material-icons">done</i>
         </button>
 
-        <button className='btn red'>
-          <i className='material-icons'>remove</i>
+        <button className="btn red">
+          <i className="material-icons">remove</i>
         </button>
       </td>
     </tr>
-
   );
 };
