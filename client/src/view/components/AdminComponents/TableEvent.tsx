@@ -41,16 +41,7 @@ export const TableEvents: FC = () => {
           return item;
       }
     })
-    .map((item, i) => (
-      <EventString
-        key={i}
-        title={item.title}
-        date={item.date}
-        status={item.status}
-        tickets={item.encashTickets}
-        id={item.id}
-      />
-    ));
+    .map((item, i) => <EventString key={i} event={item} />);
 
   return (
     <div className="row">

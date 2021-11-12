@@ -7,9 +7,12 @@ import { UPDATE_STATISTIC_MUTATION } from '../../../mutations/statisticMutation'
 import { useMutation } from '@apollo/client';
 import { STATISTIC_QUERY } from '../../../queries/statisticQuery';
 import { selectStatistic } from '../../../store/selectors/selectors';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { actions } from '../../../store/actions';
 
-export const EventString: FC<EventStringType> = ({ title, date, tickets, status, id }) => {
+export const EventString: FC<EventStringType> = ({ event }) => {
+  const { title, date, encashTickets, status, id } = event;
+  const dispatch = useDispatch();
   let iClassName;
 
   switch (status) {
@@ -67,16 +70,21 @@ export const EventString: FC<EventStringType> = ({ title, date, tickets, status,
     delEvent({ variables: { id: id } });
   };
 
+  const CorrectEvent = () => {
+    dispatch(actions.createCorrectedEvent(event));
+    document.location.href = '/ShowBill.tsx';
+  };
+
   return (
     <tr className="tr">
       <td>{title}</td>
       <td>{date}</td>
-      <td>{tickets}</td>
+      <td>{encashTickets}</td>
       <td>
         <i className={iClassName}> </i>
       </td>
       <td>
-        <button className="btn green">
+        <button className="btn green" onClick={CorrectEvent}>
           <i className="material-icons">done</i>
         </button>
 
