@@ -9,18 +9,14 @@ import { IAdminState } from '../../types';
 import { TableEvents } from '../components/AdminComponents/TableEvent';
 import { FC } from 'react';
 
-export const Admin: FC<IAdminState> = ({ path, statistic, eventData }) => {
+export const Admin: FC<IAdminState> = ({ path }) => {
   return (
     <div className="admin">
       <SideMenu path={path} />
       <main>
         <Header path={path} />
-        <Statistic
-          planned={statistic.planned}
-          completed={statistic.completed}
-          canceled={statistic.canceled}
-        />
-        <TableEvents eventData={eventData} />
+        <Statistic />
+        <TableEvents />
       </main>
       <Footer />
     </div>
