@@ -1,11 +1,11 @@
 import { gql } from '@apollo/client';
 
 export const STATISTIC_QUERY = gql`
-  query statisticQuery() {
-    statistic() {
-      id,
-      planned,
-      completed,
+  query statisticsQuery {
+    statistics {
+      id
+      planned
+      completed
       canceled
     }
   }
