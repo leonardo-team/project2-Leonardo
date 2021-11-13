@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { EventBlock } from './EventBlock';
-import { StatisticType } from '../../../types';
 import { useQuery } from '@apollo/client';
 import { STATISTIC_QUERY } from '../../../queries/statisticQuery';
 import { useDispatch, useSelector } from 'react-redux';
