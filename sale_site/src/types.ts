@@ -10,6 +10,8 @@ export type EventCardType = {
     visited: number;
 }
 
+export type ActionsTypes ={}
+
 export type HeaderType = {
     login?: string,
     path?:string
