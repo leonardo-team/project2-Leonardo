@@ -115,4 +115,3 @@ export const SideMenu: FC<SideMenuProps> = ({ path }) => {
     </div>
   );
 };
-export default SideMenu;
