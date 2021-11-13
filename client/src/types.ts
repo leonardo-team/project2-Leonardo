@@ -23,6 +23,7 @@ export type EventType = {
   rate: number,
   encashTickets: number,
   visited: number,
+  tickets?: Array<TicketType>
 };
 
 export type EventsType = {
