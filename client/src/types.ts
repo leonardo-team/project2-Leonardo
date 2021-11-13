@@ -10,6 +10,7 @@ export type StatisticType = {
   planned: number,
   completed: number,
   canceled: number,
+  id: string
 };
 
 export type EventType = {
@@ -29,10 +30,7 @@ export type EventsType = {
 };
 
 export type EventStringType = {
-  title: string,
-  date: string,
-  tickets: number,
-  status: string
+  event: EventType
 }
 
 export type TicketType = {
@@ -50,10 +48,10 @@ export interface IAppState {
   statistic: StatisticType,
   eventData: Array<EventType>,
   tickets: Array<TicketType>,
+  eventsTitle: 'Все события' | 'Состоявшиеся события' | 'Отмененные события' | 'Планируемые события',
+  correctedEvent: '' | EventType
 }
 
 export interface IAdminState {
-  statistic: StatisticType,
-  eventData: Array<EventType>,
   path: string
 }
