@@ -1,22 +1,17 @@
 import { FC, useCallback, useRef, useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import '../../../css/custom.css';
-import { selectCorrectedEvent } from '../../../store/selectors/selectors';
-import { useDispatch, useSelector } from 'react-redux';
-import { actions } from '../../../store/actions';
 
 const EVENTSTATUS = ['Планируется', 'Отменено', 'Прошло'];
 const EMPTY_FORM = {
-  title: '',
-  description: '',
-  date: '',
-  image: '',
-  status: '',
-  tickets: '',
+  eventName: '',
+  eventDescription: '',
+  eventStatus: '',
+  ticketsNumber: '',
   encashTickets: '',
   visited: '',
+  image: '',
 };
-
 export const CreateForm: FC = () => {
   const imageRef = useRef<HTMLInputElement>(null);
   const [form, setForm] = useState(EMPTY_FORM);
@@ -72,16 +67,16 @@ export const CreateForm: FC = () => {
             <tr>
               <input type="hidden" name="pastdata" value="{{ usr.id }}" />
               <td>
-                <label htmlFor="title">Название</label>
+                <label htmlFor="eventName">Название</label>
               </td>
               <td>
                 {' '}
                 <input
                   className="createForm-Control"
-                  id="title"
-                  name="title"
+                  id="eventName"
+                  name="eventName"
                   onChange={inputChangeHandle}
-                  value={form.title}
+                  value={form.eventName}
                 />
               </td>
             </tr>
@@ -92,7 +87,12 @@ export const CreateForm: FC = () => {
               </td>
               <td>
                 {' '}
-                <input id="date" type="date" name="date" onChange={inputChangeHandle} />
+                <input
+                  id="date"
+                  type="date"
+                  name="date"
+                  onChange={inputChangeHandle}
+                />
               </td>
             </tr>
 
@@ -104,7 +104,11 @@ export const CreateForm: FC = () => {
                 </label>
               </td>
               <td>
-                <img className="custom-file-input" src={form.image} alt="image" />
+                <img
+                  className="custom-file-input"
+                  src={form.image}
+                  alt="image"
+                />
               </td>
               <td>
                 <input
@@ -118,30 +122,30 @@ export const CreateForm: FC = () => {
             </tr>
             <tr>
               <td>
-                <label htmlFor="description">Описание</label>
+                <label htmlFor="eventDescription">Описание</label>
               </td>
               <td>
                 {' '}
                 <textarea
-                  id="description"
-                  name="description"
+                  id="eventDescription"
+                  name="eventDescription"
                   onChange={inputChangeHandle}
-                  value={form.description}
+                  value={form.eventDescription}
                 />
               </td>
             </tr>
 
             <tr>
               <td>
-                <label htmlFor=" status">Статус мероприятия</label>
+                <label htmlFor=" eventStatus">Статус мероприятия</label>
               </td>
               <td>
                 <select
-                  id=" status"
+                  id=" eventStatus"
                   className="form-select"
-                  name=" status"
+                  name=" eventStatus"
                   onChange={inputChangeHandle}
-                  value={form.status}
+                  value={form.eventStatus}
                 >
                   <option value="" selected disabled>
                     Выберите...
@@ -156,22 +160,22 @@ export const CreateForm: FC = () => {
             </tr>
             <tr>
               <td>
-                <label htmlFor="tickets">Количество билетов</label>
+                <label htmlFor="ticketsNumber">Количество билетов</label>
               </td>
               <td>
                 <input
-                  id="tickets"
-                  name="tickets"
+                  id="ticketsNumber"
+                  name="ticketsNumber"
                   type="number"
                   onChange={inputChangeHandle}
-                  value={form.tickets}
+                  value={form.ticketsNumber}
                 />
               </td>
             </tr>
 
             <tr>
               <td>
-                <label htmlFor="encashTickets">Реализовано билетов</label>
+                <label htmlFor="ticketsNumber">Реализовано билетов</label>
               </td>
               <td>
                 <input
@@ -179,14 +183,14 @@ export const CreateForm: FC = () => {
                   name="encashTickets"
                   type="number"
                   onChange={inputChangeHandle}
-                  value={form.encashTickets}
+                  value={form.ticketsNumber}
                 />
               </td>
             </tr>
 
             <tr>
               <td>
-                <label htmlFor="visited">Реальных посетителей</label>
+                <label htmlFor="ticketsNumber">Реальных посетителей</label>
               </td>
               <td>
                 <input
