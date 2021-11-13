@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header/Header';
-import SideMenu from '../components/SideMenu/SideMenu';
+import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import SideMenu from '../components/SideMenu';
 import { TicketsQuantityContain } from '../components/Tickets/TicketsQuantityContain';
 import '../../../src/css/custom.css';
 import 'materialize-css/dist/css/materialize.min.css';
