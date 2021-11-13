@@ -1,17 +1,15 @@
 import React, { FC, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
+import { LoginFormType } from "../../../types";
 import "../css/site.css";
 
-export type LoginProps = {
-  path?: string;
-};
 
 const EMPTY_FORM = {
   login: "",
   password: "",
 };
 
-export const LoginForm: FC<LoginProps> = ({ path }) => {
+export const LoginForm: FC<LoginFormType> = ({ path }) => {
   const [form, setForm] = useState(EMPTY_FORM);
 
   const loginChandeHandle = useCallback((e) => {

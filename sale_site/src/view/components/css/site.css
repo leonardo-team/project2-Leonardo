@@ -6774,7 +6774,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .demo-card-square > .mdl-card__title {
 	color: #fff;
-	background: url(../event_card/avatar.svg) no-repeat #ec8b46;
+	background: url(../EventCard/avatar.svg) no-repeat #ec8b46;
 }
 .button {
 	display: flex;
@@ -6798,9 +6798,10 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 	border-color: #0ea0ad;
 	padding-right: 10px;
 	padding-left: 10px;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
 }
 .Login_page-password {
 	max-width: 150px;
@@ -6809,10 +6810,10 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 	border-color: #0ea0ad;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
 }
 .Home {
 	display: flex;
@@ -6828,7 +6829,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 	margin-top: 75px;
 }
 .RegisterForm {
-	margin-left:250px;
+	margin-left: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

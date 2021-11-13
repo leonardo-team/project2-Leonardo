@@ -1,16 +1,12 @@
 import {FC, useState} from 'react';
 import { Link } from 'react-router-dom';
+import { EventCardType } from '../../../types';
 import '../css/site.css'
 
 
-export type CardProps = {
-    eventName?:string;
-    eventDate?:string;
-    eventSummary?:string;
-    eventViews?:string;
-}
 
-export const EventCard:FC<CardProps> = ({
+
+export const EventCard:FC<EventCardType> = ({
     eventName,
     eventDate,
     eventSummary,
