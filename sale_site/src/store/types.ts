@@ -1,31 +1,21 @@
-import { actions } from './store/actions';
-import { counterReducer } from './store/reducers/reducers';
+import { actions } from './actions';
+import { counterReducer } from './reducers/reducers';
 
 type PropertiesTypes<T> = T extends {[key: string]: (...args: any) => infer U} ? U :never;
 export type ActionsTypes = PropertiesTypes<typeof actions>;
 
 export type RootState = ReturnType<typeof counterReducer>;
 
-export type StatisticType = {
-  planned: number,
-  completed: number,
-  canceled: number,
+
+export type RegisterType = {
+  login: string,
+  password: string,
+  password2: string,
+ 
 };
 
-export type EventType = {
-  id: string,
-  title: string,
-  description: string,
-  date: string,
-  image: string,
-  status: 'completed' | 'planned' | 'canceled',
-  rate: number,
-  encashTickets: number,
-  visited: number,
-};
-
-export type EventsType = {
-  eventData: Array<EventType>
+export type RegistersType = {
+  eventData: Array<RegisterType>
 };
 
 export type EventStringType = {

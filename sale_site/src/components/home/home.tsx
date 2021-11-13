@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from 'react';
-import { EventCard } from '../event_card/event_card';
+import { EventCard } from '../EventCard/EventCard';
 import '../css/site.css'
-import { events } from '../event_object';
+import { Events } from '../Events';
 
 export function Home(){
   return (
@@ -10,7 +10,7 @@ export function Home(){
         <div className="page-content">
           <div className="mdl-grid">
             {
-              events.map(event=>
+              Events.map(event=>
                 <EventCard eventName={event.eventName} eventDate={event.eventDate} eventSummary={event.eventSummary} />
                 )
             }

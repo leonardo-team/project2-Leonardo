@@ -1,11 +1,9 @@
 import { FC } from 'react';
-import { actions } from '../../../store/actions';
-import { useDispatch } from 'react-redux';
 
 import '../../../css/custom.css';
 
 export type EventBlockProps = {
-  title: string
+  title?: string
   stat?: number
 }
 
@@ -38,12 +36,6 @@ export const EventBlock: FC<EventBlockProps> = ({ title, stat }) => {
       eventIcon = 'fas fa-chart-pie';
   }
 
-  const dispatch = useDispatch();
-
-  const selectEvents = () => {
-    dispatch(actions.changeEventsTitle(title));
-  };
-
   return (
     <div className='col l3 s6'>
       <div className={eventStyle}>
@@ -54,7 +46,7 @@ export const EventBlock: FC<EventBlockProps> = ({ title, stat }) => {
         <div className='icon'>
           <i className={eventIcon}> </i>
         </div>
-        <div className='small-box-footer animsition-link' onClick={selectEvents}>More info
+        <div className='small-box-footer animsition-link'>More info
           <i className='fa fa-arrow-circle-down'> </i>
         </div>
       </div>

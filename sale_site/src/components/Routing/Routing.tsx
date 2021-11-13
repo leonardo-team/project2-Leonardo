@@ -5,14 +5,17 @@ import {
     Route,
     Link
   } from "react-router-dom"
-import { Footer } from './footer/footer';
-import { Header } from './header/header';
-import { Home } from './home/home';
-import { Login } from './login/login';
-import { Registration } from './registration/registration';
+import { Footer } from '../Footer/Footer';
+import { Header } from '../Header/Header';
+import { Home } from '../Home/Home';
+import { LoginForm } from '../LoginForm/LoginForm';
+import { RegisterForm } from '../RegisterForm/RegisterForm';
+import { MoreDetails } from '../MoreDetails/MoreDetails';
+import { LoginHome } from '../LoginHome/LoginHome';
+import { useDispatch, useSelector } from 'react-redux';
+import { actions } from '../../store/actions';
+import { selectStatistic, selectEventList } from '../../store/selectors/selectors';
 import '../components/css/site.css'
-import { DetailEvents } from './detail_events/detail_events';
-import { LoginHome } from './login_home/login_home';
 
   const routes = [
     {
@@ -30,7 +33,7 @@ import { LoginHome } from './login_home/login_home';
       sidebar: () =>
       <div className="Main">
             <Header login="Зарегистрироваться" path="/registration.tsx"/>
-            <Login path="/login_home.tsx"/>
+            <LoginForm path="/login_home.tsx"/>
             <Footer />
         </div>
     },
@@ -39,7 +42,7 @@ import { LoginHome } from './login_home/login_home';
       sidebar: () =>
       <div className="Main">
             <Header login="На главную" path="/"/>
-            <Registration />
+            <RegisterForm />
             <Footer />
         </div>
     },

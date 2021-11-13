@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const EVENTS_QUERY = gql`
-  query eventsQuery($date: String) {
-    events(date: $date) {
+  query eventsQuery($offset: Int, $limit: Int) {
+    events(offset: $offset, limit: $limit) {
       id
       title
       description
@@ -17,5 +17,6 @@ export const EVENTS_QUERY = gql`
         encash
       }
     }
+    count
   }
 `;

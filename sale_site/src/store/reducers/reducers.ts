@@ -1,4 +1,4 @@
-import { IAppState, ActionsTypes } from '../../types';
+import { IAppState, ActionsTypes } from '../types';
 
 const initialState: IAppState = {
   statistic: {

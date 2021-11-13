@@ -1,21 +1,8 @@
 import { FC } from 'react';
 import { EventBlock } from './EventBlock';
-import { useQuery } from '@apollo/client';
-import { STATISTIC_QUERY } from '../../../queries/statisticQuery';
-import { useDispatch, useSelector } from 'react-redux';
-import { actions } from '../../../store/actions';
-import { selectStatistic } from '../../../store/selectors/selectors';
+import { StatisticType } from '../../../types';
 
-export const Statistic: FC = () => {
-  const { loading, data = {} } = useQuery(STATISTIC_QUERY);
-  const { statistics = [] } = data;
-  if (statistics.length > 0) {
-    const dispatch = useDispatch();
-    dispatch(actions.getStatistic(statistics[0]));
-  }
-
-  const { planned, completed, canceled } = useSelector(selectStatistic);
-
+export const Statistic: FC<StatisticType> = ({ planned, completed, canceled }) => {
   const arrayEvents = [
     {
       title: 'planned',
