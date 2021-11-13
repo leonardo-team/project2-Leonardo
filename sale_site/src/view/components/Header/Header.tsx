@@ -1,14 +1,12 @@
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HeaderType } from '../../../types';
 import '../css/site.css'
 
-export type HeaderProps ={
-    login?: string,
-    path?:string
-}
 
 
-export const Header:FC <HeaderProps> = ({login = "Войти", path})=>{
+
+export const Header:FC <HeaderType> = ({login = "Войти", path})=>{
 
   return (
 

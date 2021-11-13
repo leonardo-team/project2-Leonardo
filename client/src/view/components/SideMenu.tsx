@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import '../../../src/css/custom.css';
+import '../../../css/custom.css';
 import 'materialize-css/dist/css/materialize.css';
-import avatar from '../assets/img/avatar04.png';
-import image from '../assets/img/photo1.png';
+import avatar from '../../assets/img/avatar04.png';
+import image from '../../assets/img/photo1.png';
 
 export type SideMenuProps = {
   path?: string,
