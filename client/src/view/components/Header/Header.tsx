@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import '../../css/custom.css';
+import '../../../css/custom.css';
 
 export type HeaderProps = {
   path?:string
