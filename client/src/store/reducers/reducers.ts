@@ -5,6 +5,7 @@ const initialState: IAppState = {
     planned: 0,
     completed: 0,
     canceled: 0,
+    id: '1',
   },
   eventData: [
     {
@@ -42,6 +43,8 @@ const initialState: IAppState = {
     },
   ],
   tickets: [],
+  eventsTitle: 'Все события',
+  correctedEvent: '',
 };
 
 export const counterReducer = (state = initialState, action: ActionsTypes) => {
@@ -49,14 +52,17 @@ export const counterReducer = (state = initialState, action: ActionsTypes) => {
     case 'GET_SITE_STATISTIC':
       return { ...state, statistic: action.payload };
 
-    case 'CHANGE_SITE_STATISTIC':
-      return { ...state, statistic: action.payload };
-
     case 'GET_EVENTS':
       return { ...state, eventData: action.payload };
 
     case 'GET_TICKETS_PULL':
       return { ...state, tickets: action.payload };
+
+    case 'CHANGE_EVENTS_TITLE':
+      return { ...state, eventsTitle: action.payload };
+
+    case 'CREATE_CORRECTED_EVENT':
+      return { ...state, correctedEvent: action.payload };
 
     default:
       return state;
