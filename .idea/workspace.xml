@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="153d8782-ff54-4ad1-b571-319205dae82a" name="Default Changelist" comment="Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx">
-      <change afterPath="$PROJECT_DIR$/sale_site/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/store/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/store/reducers/reducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/EventCard/EventCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/EventCard/avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Events.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Footer/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/LoginForm/LoginForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/MoreDetails/MoreDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/RegisterForm/RegisterForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Routing/Routing.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/BuyTicket.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/LoginPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/RegisterPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/view/components/SideMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/components/SideMenu/SideMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/components/SideMenu/SideMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/Admin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/ShowBill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/ShowBill.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/Tickets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/Tickets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_site/src/view/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sale_site/src/view/components/Header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +30,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="klodygin" />
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="master" />
