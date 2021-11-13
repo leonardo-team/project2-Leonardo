@@ -89,6 +89,7 @@ main {
 
 .small-box p {
     color: #fff;
+    font-weight: bold;
 }
 
 .small-box .icon {
@@ -221,6 +222,21 @@ div.quick-links a {
 .btn-wrapper {
     display: flex;
     margin-top: 10px;
+}
+
+.tbody {
+    display: block;
+    height: 500px;
+    overflow: auto;
+}
+.thead, .tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.animsition-link {
+    cursor: pointer;
 }
 
 @media (max-width: 320px) {
