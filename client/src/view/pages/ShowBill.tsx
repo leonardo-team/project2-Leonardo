@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { CreateForm } from '../components/EventDetailsComponents/EventDetails';
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
-import SideMenu from '../components/SideMenu';
+import { Footer } from '../components/Footer/Footer';
+import { Header } from '../components/Header/Header';
+import { SideMenu } from '../components/SideMenu/SideMenu';
 import '../../../src/css/custom.css';
 
 export type ShowBillProps = {

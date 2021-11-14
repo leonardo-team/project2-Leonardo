@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="153d8782-ff54-4ad1-b571-319205dae82a" name="Default Changelist" comment="" />
+    <list default="true" id="153d8782-ff54-4ad1-b571-319205dae82a" name="Default Changelist" comment="Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx">
+      <change afterPath="$PROJECT_DIR$/client/src/view/components/SideMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/components/SideMenu/SideMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/components/SideMenu/SideMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/Admin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/ShowBill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/ShowBill.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/pages/Tickets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/pages/Tickets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_site/src/view/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sale_site/src/view/components/Header/Header.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +19,21 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -18,6 +43,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/src/view/components/AdminComponents/TableEvent.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="20gOUrlRZgbULFldhJIrRsdE1Oa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,21 +54,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\node_modules\eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\src\store\reducers" />
+      <recent name="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\src\store" />
+      <recent name="C:\Users\Kirilll\PhpstormProjects\project2-Leonardo\client\src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +96,23 @@
       <workItem from="1636467534156" duration="48000" />
       <workItem from="1636472913381" duration="12000" />
       <workItem from="1636473784898" duration="2897000" />
+      <workItem from="1636562899177" duration="20122000" />
+      <workItem from="1636632043218" duration="5063000" />
+      <workItem from="1636639406102" duration="349000" />
+      <workItem from="1636639805468" duration="17614000" />
+      <workItem from="1636659956083" duration="138000" />
+      <workItem from="1636660446086" duration="5462000" />
+      <workItem from="1636698584170" duration="7151000" />
+      <workItem from="1636716470316" duration="43266000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx">
+      <created>1636800506557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636800506572</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +129,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

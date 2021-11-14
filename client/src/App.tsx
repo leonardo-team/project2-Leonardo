@@ -1,8 +1,9 @@
 import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { offsetLimitPagination } from '@apollo/client/utilities';
+
 import './App.css';
-import Routing from './view/components/Routing/Routing';
+import { Routing } from './view/components/Routing/Routing';
 
 const cache = new InMemoryCache({
   typePolicies: {

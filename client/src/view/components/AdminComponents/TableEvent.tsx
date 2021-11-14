@@ -10,7 +10,7 @@ import { selectEventList, selectEventsTitle } from '../../../store/selectors/sel
 import { actions } from '../../../store/actions';
 
 export const TableEvents: FC = () => {
-  const { data = {}, fetchMore } = useQuery(EVENTS_QUERY, {
+  const { data = {} } = useQuery(EVENTS_QUERY, {
     variables: { date: '' },
     notifyOnNetworkStatusChange: true,
   });

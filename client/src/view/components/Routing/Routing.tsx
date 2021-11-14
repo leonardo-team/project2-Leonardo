@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Admin } from '../../pages/Admin';
 import { ShowBill } from '../../pages/ShowBill';
 import { Tickets } from '../../pages/Tickets';
-import { useSelector } from 'react-redux';
-import { selectStatistic, selectEventList } from '../../../store/selectors/selectors';
 
-export default function Routing() {
+export const Routing: React.FC = () => {
   const routes = [
     {
       path: '/',
@@ -34,4 +32,4 @@ export default function Routing() {
       </Switch>
     </Router>
   );
-}
+};

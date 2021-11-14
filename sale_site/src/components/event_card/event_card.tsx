@@ -20,10 +20,10 @@ export const EventCard:FC<EventCardType> = ({
                 <div className="mdl-card__title mdl-card--expand">
                     <h2 className="mdl-card__title-text">
                         {eventName}
-                        
+
                     </h2>
                     <p>
-                        {eventDate}  
+                        {eventDate}
                     </p>
                 </div>
                 <div className="mdl-card__supporting-text">

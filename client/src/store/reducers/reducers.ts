@@ -1,4 +1,4 @@
-import { IAppState, ActionsTypes } from '../../types';
+import { IAppState, ActionsTypes, TicketType } from '../../types';
 
 const initialState: IAppState = {
   statistic: {
@@ -44,7 +44,18 @@ const initialState: IAppState = {
   ],
   tickets: [],
   eventsTitle: 'Все события',
-  correctedEvent: '',
+  correctedEvent: {
+    id: 'initial',
+    title: '',
+    description: '',
+    date: '',
+    image: '',
+    status: 'planned',
+    rate: 0,
+    encashTickets: 0,
+    visited: 0,
+    tickets: [],
+  },
 };
 
 export const counterReducer = (state = initialState, action: ActionsTypes) => {

@@ -1,10 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderType } from '../../../types';
-import '../css/site.css'
-
-
-
+import '../css/site.css';
 
 export const Header:FC <HeaderType> = ({login = "Войти", path})=>{
 
@@ -30,7 +27,14 @@ export const Header:FC <HeaderType> = ({login = "Войти", path})=>{
                 </div>
               </header>
             </div>
-          </div> 
+<<<<<<< HEAD
+          </div>
 
   );
 }
+=======
+          </div>
+
+  );
+}
+>>>>>>> master

@@ -1,0 +1,525 @@
+Index: sale_site/src/view/components/MoreDetails/MoreDetails.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/MoreDetails/MoreDetails.tsx b/sale_site/src/view/components/MoreDetails/MoreDetails.tsx
+new file mode 100644
+--- /dev/null	(date 1636812707364)
++++ b/sale_site/src/view/components/MoreDetails/MoreDetails.tsx	(date 1636812707364)
+@@ -0,0 +1,10 @@
++export const MoreDetails = () => {
++  return (
++    <div className="MoreDetails">
++      <h2 className="MoreDetails_EventName">EventName</h2>
++      <div className="MoreDetails_EventDate">EventDate</div>
++      <div className="MoreDetails_EventDescription">EventDescription</div>
++      <button className="get_ticket_button">Получить билет</button>
++    </div>
++  );
++};
+Index: sale_site/src/store/actions.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/store/actions.ts b/sale_site/src/store/actions.ts
+new file mode 100644
+--- /dev/null	(date 1636812424244)
++++ b/sale_site/src/store/actions.ts	(date 1636812424244)
+@@ -0,0 +1,27 @@
++import { StatisticType, EventType, TicketType } from '../types';
++
++export const actions = {
++  getStatistic: (statObj: StatisticType) => ({
++    type: 'GET_SITE_STATISTIC',
++    payload: statObj,
++  } as const
++  ),
++
++  changeStatistic: (statObj: StatisticType) => ({
++    type: 'CHANGE_SITE_STATISTIC',
++    payload: statObj,
++  } as const
++  ),
++
++  getEventList: (eventList: Array<EventType>) => ({
++    type: 'GET_EVENTS',
++    payload: eventList,
++  } as const
++  ),
++
++  getTicketsPull: (ticketsList: Array<TicketType>) => ({
++    type: 'GET_TICKETS_PULL',
++    payload: ticketsList,
++  } as const
++  ),
++};
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"153d8782-ff54-4ad1-b571-319205dae82a\" name=\"Default Changelist\" comment=\"Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx\">\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/App.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/store/actions.ts\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/store/reducers/reducers.ts\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/types.ts\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/EventCard/EventCard.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/EventCard/avatar.svg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/Events.ts\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/Footer/Footer.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/LoginForm/LoginForm.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/MoreDetails/MoreDetails.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/RegisterForm/RegisterForm.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/components/Routing/Routing.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/page/BuyTicket.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/page/HomePage.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/page/LoginPage.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/sale_site/src/view/page/RegisterPage.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/codeStyles/Project.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/codeStyles/Project.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/server/package-lock.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/server/package-lock.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/server/server/app.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/server/server/app.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"TypeScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"klodygin\" />\r\n  </component>\r\n  <component name=\"Git.Rebase.Settings\">\r\n    <option name=\"NEW_BASE\" value=\"master\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/client/src/view/components/AdminComponents/TableEvent.tsx\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"20gOUrlRZgbULFldhJIrRsdE1Oa\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"js.linters.configure.manually.selectedeslint\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/server\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.standard\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.standard\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\node_modules\\eslint\" />\r\n    <property name=\"node.js.selected.package.standard\" value=\"\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"prettierjs.PrettierConfiguration.Package\" value=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\node_modules\\prettier\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"settings.javascript.prettier\" />\r\n    <property name=\"ts.external.directory.path\" value=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\node_modules\\typescript\\lib\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\server\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\src\\store\\reducers\" />\r\n      <recent name=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\src\\store\" />\r\n      <recent name=\"C:\\Users\\Kirilll\\PhpstormProjects\\project2-Leonardo\\client\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"153d8782-ff54-4ad1-b571-319205dae82a\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1636462787484</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1636462787484</updated>\r\n      <workItem from=\"1636462790496\" duration=\"3132000\" />\r\n      <workItem from=\"1636466920850\" duration=\"70000\" />\r\n      <workItem from=\"1636467327280\" duration=\"12000\" />\r\n      <workItem from=\"1636467534156\" duration=\"48000\" />\r\n      <workItem from=\"1636472913381\" duration=\"12000\" />\r\n      <workItem from=\"1636473784898\" duration=\"2897000\" />\r\n      <workItem from=\"1636562899177\" duration=\"20122000\" />\r\n      <workItem from=\"1636632043218\" duration=\"5063000\" />\r\n      <workItem from=\"1636639406102\" duration=\"349000\" />\r\n      <workItem from=\"1636639805468\" duration=\"17614000\" />\r\n      <workItem from=\"1636659956083\" duration=\"138000\" />\r\n      <workItem from=\"1636660446086\" duration=\"5462000\" />\r\n      <workItem from=\"1636698584170\" duration=\"7151000\" />\r\n      <workItem from=\"1636716470316\" duration=\"43266000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx\">\r\n      <created>1636800506557</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636800506572</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge branch 'master' of https://github.com/pvpavlova/project2-Leonardo into klodygin&#10;&#10;# Conflicts:&#10;#&#9;client/src/view/components/EventDetailsComponents/EventDetails.tsx&#10;#&#9;client/src/view/components/Routing/Routing.tsx\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 66dee3be81f8debe8e8c2d306bd007f0da089b52)
++++ b/.idea/workspace.xml	(date 1636813091788)
+@@ -5,23 +5,15 @@
+       <change afterPath="$PROJECT_DIR$/sale_site/src/App.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/components/event_card/event_card.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/store/actions.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/sale_site/src/store/reducers/reducers.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/sale_site/src/types.ts" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/EventCard/EventCard.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/EventCard/avatar.svg" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Events.ts" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Footer/Footer.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/LoginForm/LoginForm.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/MoreDetails/MoreDetails.tsx" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/RegisterForm/RegisterForm.tsx" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/components/Routing/Routing.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/BuyTicket.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/HomePage.tsx" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/LoginPage.tsx" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/sale_site/src/view/page/RegisterPage.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/server/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/app.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -50,7 +42,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="klodygin" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+Index: sale_site/src/view/page/BuyTicket.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/page/BuyTicket.tsx b/sale_site/src/view/page/BuyTicket.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424259)
++++ b/sale_site/src/view/page/BuyTicket.tsx	(date 1636812424259)
+@@ -0,0 +1,16 @@
++import '../components/css/site.css';
++import { FC } from 'react';
++
++
++
++export type BuyTicketProps = {
++    path:string
++}
++
++export const BuyTicket: FC<BuyTicketProps> = ({path})=>{
++    return(
++        <div className="buy_ticket_page">
++            Тут происходит покупка билетов
++        </div>
++    )
++}
+\ No newline at end of file
+Index: sale_site/src/view/page/HomePage.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/page/HomePage.tsx b/sale_site/src/view/page/HomePage.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424259)
++++ b/sale_site/src/view/page/HomePage.tsx	(date 1636812424259)
+@@ -0,0 +1,17 @@
++import '../components/css/site.css';
++import { FC } from 'react';
++import { Footer } from '../components/Footer/Footer';
++import { Header } from '../components/Header/Header';
++import { Home } from '../components/Home/Home';
++import { SiteAppState } from '../../types';
++
++
++export const HomePage: FC<SiteAppState> = ({path})=>{
++    return(
++        <div className="home_page">
++            <Header login="Войти" path={path}/>
++            <Home />
++            <Footer />
++        </div>
++    )
++}
+\ No newline at end of file
+Index: sale_site/src/view/page/LoginPage.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/page/LoginPage.tsx b/sale_site/src/view/page/LoginPage.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424259)
++++ b/sale_site/src/view/page/LoginPage.tsx	(date 1636812424259)
+@@ -0,0 +1,19 @@
++import '../components/css/site.css';
++import { FC } from 'react';
++
++import { Header } from '../components/Header/Header';
++
++import { Footer } from '../components/Footer/Footer';
++import { LoginForm } from '../components/LoginForm/LoginForm';
++import { PagePathType } from '../../types';
++
++
++export const LoginPage: FC<PagePathType> = ({path})=>{
++    return(
++        <div className="login_page">
++            <Header login="Зарегистрироваться" path={path}/>
++            <LoginForm />
++            <Footer />
++        </div>
++    )
++}
+\ No newline at end of file
+Index: sale_site/src/view/components/Events.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/Events.ts b/sale_site/src/view/components/Events.ts
+new file mode 100644
+--- /dev/null	(date 1636812424244)
++++ b/sale_site/src/view/components/Events.ts	(date 1636812424244)
+@@ -0,0 +1,38 @@
++export const events = [
++    { 
++    "eventName":"Концерт",
++    "eventDate":"30.11.2021",
++    "eventSummary":"Знаменитая группа Кино выступит со своим альбомом",
++    "eventViews":"0"
++    },
++    {
++    "eventName":"Марафон",
++    "eventDate":"20.11.2021",
++    "eventSummary":"Различные дистанции 5км, 10км, 21,1км и 42,2км",
++    "eventViews":"1"
++  },
++  {
++    "eventName":"Марафон",
++    "eventDate":"22.11.2021",
++    "eventSummary":"Вручение ужегодной премии для всех нас полезная штука",
++    "eventViews":"8"
++    },
++  {
++    "eventName":"Стильные бабульки на сцене поющие",
++    "eventDate":"22.11.2021",
++    "eventSummary":"Вручение ужегодной премии",
++    "eventViews":"8"
++    },
++  {
++    "eventName":"Марафон",
++    "eventDate":"22.11.2021",
++    "eventSummary":"Вручение ужегодной премии",
++    "eventViews":"8"
++    },
++  {
++    "eventName":"Золотой Грамофон",
++    "eventDate":"22.11.2021",
++    "eventSummary":"Вручение ужегодной премии",
++    "eventViews":"8"
++    },
++  ]
+\ No newline at end of file
+Index: server/server/app.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>require('dotenv').config();\r\nconst express = require('express');\r\nconst { graphqlHTTP } = require('express-graphql');\r\nconst schema = require('../schema/schema');\r\nconst mongoose = require('mongoose');\r\nconst cors = require('cors');\r\n\r\nconst app = express();\r\nconst PORT = 3005;\r\n\r\nmongoose.connect(process.env.uri, {\r\n  useNewUrlParser: true,\r\n  useUnifiedTopology: true,\r\n  useFindAndModify: false,\r\n});\r\n\r\napp.use(cors());\r\n\r\napp.use(\r\n  '/graphql',\r\n  graphqlHTTP({\r\n    schema,\r\n    graphiql: true,\r\n  }),\r\n);\r\n\r\nconst dbConnection = mongoose.connection;\r\ndbConnection.on('error', err => console.log(`Connection error: ${err}`));\r\ndbConnection.once('open', () => console.log('Connected to DB!'));\r\n\r\napp.listen(PORT, err => {\r\n  err ? console.log(err) : console.log('Server started!');\r\n});\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/server/app.js b/server/server/app.js
+--- a/server/server/app.js	(revision 66dee3be81f8debe8e8c2d306bd007f0da089b52)
++++ b/server/server/app.js	(date 1636812089610)
+@@ -1,8 +1,14 @@
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ require('dotenv').config();
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ const express = require('express');
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ const { graphqlHTTP } = require('express-graphql');
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ const schema = require('../schema/schema');
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ const mongoose = require('mongoose');
++// eslint-disable-next-line @typescript-eslint/no-var-requires
+ const cors = require('cors');
+ 
+ const app = express();
+@@ -25,9 +31,12 @@
+ );
+ 
+ const dbConnection = mongoose.connection;
++// eslint-disable-next-line no-console
+ dbConnection.on('error', err => console.log(`Connection error: ${err}`));
++// eslint-disable-next-line no-console
+ dbConnection.once('open', () => console.log('Connected to DB!'));
+ 
+ app.listen(PORT, err => {
++  // eslint-disable-next-line no-console,no-unused-expressions
+   err ? console.log(err) : console.log('Server started!');
+ });
+Index: sale_site/src/components/event_card/event_card.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/components/event_card/event_card.tsx b/sale_site/src/components/event_card/event_card.tsx
+new file mode 100644
+--- /dev/null	(date 1636812668878)
++++ b/sale_site/src/components/event_card/event_card.tsx	(date 1636812668878)
+@@ -0,0 +1,44 @@
++import {FC, useState} from 'react';
++import { Link } from 'react-router-dom';
++import { EventCardType } from '../../../types';
++import '../css/site.css'
++
++
++
++
++export const EventCard:FC<EventCardType> = ({
++    eventName,
++    eventDate,
++    eventSummary,
++    eventViews,
++})=>{
++
++  return (
++    <div className="EventCard my_card">
++        <div className="mdl-cell mdl-cell--4-col">
++            <div className="demo-card-square mdl-card mdl-shadow--2dp">
++                <div className="mdl-card__title mdl-card--expand">
++                    <h2 className="mdl-card__title-text">
++                        {eventName}
++                        
++                    </h2>
++                    <p>
++                        {eventDate}  
++                    </p>
++                </div>
++                <div className="mdl-card__supporting-text">
++                    {eventSummary}
++                </div>
++                <div className="mdl-card__actions mdl-card--border">
++                    <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
++                        Подробнее о событии
++                    </a>
++                    <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my_button">
++                        КУПИТЬ
++                    </button>
++                </div>
++            </div>
++        </div>
++    </div>
++  )
++}
+\ No newline at end of file
+Index: sale_site/src/view/components/Footer/Footer.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/Footer/Footer.tsx b/sale_site/src/view/components/Footer/Footer.tsx
+new file mode 100644
+--- /dev/null	(date 1636812671408)
++++ b/sale_site/src/view/components/Footer/Footer.tsx	(date 1636812671408)
+@@ -0,0 +1,16 @@
++import '../css/site.css'
++
++export const Footer = ()=>{
++
++  return (
++
++            <footer className="mdl-mini-footer">
++                <div className="mdl-mini-footer__left-section">
++                  <div className="mdl-logo">
++                    &copy; "Leonardo"
++                  </div>
++                </div>
++            </footer>
++      
++  );
++}
+\ No newline at end of file
+Index: sale_site/src/view/components/EventCard/avatar.svg
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/EventCard/avatar.svg b/sale_site/src/view/components/EventCard/avatar.svg
+new file mode 100644
+--- /dev/null	(date 1636812424244)
++++ b/sale_site/src/view/components/EventCard/avatar.svg	(date 1636812424244)
+@@ -0,0 +1,1 @@
++<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 640" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M476.982,207.612c-0.006-0.127-0.01-0.253-0.021-0.38c-0.01-0.112-0.023-0.222-0.039-0.333  c-0.016-0.115-0.031-0.229-0.053-0.343c-0.021-0.116-0.048-0.229-0.075-0.343c-0.025-0.107-0.052-0.214-0.083-0.321  c-0.032-0.114-0.07-0.226-0.108-0.337c-0.034-0.104-0.07-0.208-0.111-0.31c-0.044-0.108-0.092-0.215-0.142-0.32  c-0.047-0.102-0.095-0.203-0.146-0.303c-0.054-0.104-0.111-0.205-0.17-0.305c-0.059-0.096-0.112-0.191-0.173-0.284  c-0.067-0.104-0.142-0.203-0.212-0.302c-0.063-0.084-0.122-0.169-0.188-0.251c-0.084-0.105-0.174-0.206-0.264-0.306  c-0.048-0.053-0.09-0.11-0.142-0.162c-0.018-0.019-0.037-0.034-0.056-0.052c-0.095-0.098-0.195-0.189-0.296-0.281  c-0.072-0.066-0.145-0.135-0.217-0.197c-0.096-0.079-0.193-0.151-0.291-0.225c-0.087-0.065-0.172-0.133-0.262-0.194  c-0.092-0.062-0.188-0.118-0.28-0.176c-0.102-0.061-0.198-0.126-0.302-0.182c-0.097-0.053-0.196-0.098-0.298-0.146  c-0.104-0.05-0.205-0.104-0.311-0.15c-0.11-0.047-0.227-0.085-0.337-0.127c-0.102-0.037-0.197-0.077-0.298-0.109  c-0.115-0.037-0.234-0.064-0.354-0.095c-0.103-0.027-0.204-0.057-0.307-0.079c-0.11-0.023-0.224-0.038-0.333-0.056  c-0.117-0.019-0.233-0.041-0.353-0.053c-0.101-0.011-0.202-0.015-0.304-0.022c-0.132-0.009-0.264-0.019-0.396-0.02  c-0.025,0-0.054-0.004-0.078-0.004H116.099l184.418-49.369c0.154-0.036,0.309-0.077,0.458-0.123l78.271-20.953  c0.063-0.016,0.125-0.033,0.188-0.05l78.504-21.015c0.002,0,0.004-0.001,0.005-0.001c0.017-0.004,0.028-0.01,0.046-0.014  c0.253-0.07,0.498-0.156,0.738-0.253c0.079-0.031,0.156-0.067,0.234-0.101c0.183-0.081,0.36-0.169,0.535-0.266  c0.077-0.042,0.153-0.083,0.229-0.128c0.229-0.138,0.454-0.286,0.666-0.449c0.047-0.036,0.09-0.078,0.136-0.115  c0.172-0.138,0.336-0.284,0.491-0.438c0.07-0.069,0.14-0.14,0.206-0.212c0.146-0.153,0.28-0.314,0.41-0.48  c0.045-0.058,0.093-0.112,0.138-0.172c0.148-0.204,0.289-0.414,0.416-0.634c0.019-0.029,0.029-0.059,0.046-0.088  c0.012-0.019,0.023-0.036,0.034-0.055c0.04-0.074,0.071-0.151,0.108-0.226c0.056-0.111,0.112-0.221,0.162-0.334  c0.048-0.11,0.089-0.221,0.131-0.333c0.038-0.102,0.078-0.203,0.111-0.307c0.041-0.125,0.072-0.251,0.105-0.377  c0.024-0.093,0.051-0.185,0.071-0.279c0.029-0.135,0.052-0.271,0.073-0.405c0.014-0.089,0.027-0.178,0.04-0.268  c0.016-0.136,0.023-0.271,0.031-0.407c0.008-0.092,0.015-0.185,0.017-0.277c0.002-0.13-0.002-0.26-0.007-0.39  c-0.003-0.099-0.007-0.198-0.016-0.298c-0.01-0.123-0.023-0.244-0.041-0.366c-0.015-0.105-0.025-0.21-0.046-0.316  c-0.021-0.116-0.048-0.231-0.074-0.347c-0.019-0.081-0.029-0.162-0.053-0.242L442.44,24.582c-1.003-3.731-4.834-5.949-8.571-4.947  L40.657,124.906c-1.793,0.479-3.323,1.653-4.251,3.261c-0.929,1.608-1.18,3.52-0.699,5.313l0.231,0.862  c0.027,0.105,0.053,0.211,0.085,0.315l19.864,74.105v77.9v147.329v51.852c0,3.866,3.134,7,7,7h407.108c3.866,0,7-3.134,7-7v-51.852  V286.664v-78.822C476.994,207.764,476.985,207.689,476.982,207.612z M452.513,214.842l-67.965,64.822h-61.089l67.979-64.822H452.513  z M371.151,214.842l-67.98,64.822h-61.092l67.966-64.822H371.151z M289.761,214.842l-67.966,64.822H160.72l67.965-64.822H289.761z   M208.4,214.842l-67.965,64.822H79.344l67.965-64.822H208.4z M127.024,214.842l-57.138,54.496v-54.496H127.024z M430.732,34.968  l14.395,53.614l-70.588-38.57L430.732,34.968z M354.944,55.258l82.485,45.072l-59.015,15.798l-82.476-45.074L354.944,55.258z   M276.348,76.3l82.477,45.074l-59.004,15.795l-82.483-45.07L276.348,76.3z M197.74,97.345l82.482,45.07l-58.98,15.79l-82.473-45.071  L197.74,97.345z M119.174,118.379l82.472,45.071l-58.973,15.787l-82.496-45.063L119.174,118.379z M53.716,146.597l69.359,37.886  l-55.239,14.788L53.716,146.597z M462.994,478.845H69.886v-37.852h393.108V478.845z M462.994,426.993H69.886V293.664h393.108  V426.993z M462.994,279.664h-58.162l58.162-55.473V279.664z"/></svg>
+\ No newline at end of file
+Index: sale_site/src/App.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/App.tsx b/sale_site/src/App.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424291)
++++ b/sale_site/src/App.tsx	(date 1636812424291)
+@@ -0,0 +1,14 @@
++import React from 'react'
++import './App.css';
++import Routing from './view/components/Routing/Routing';
++
++
++function App() {
++  return (
++    <div className="App">
++      <Routing />
++    </div>
++  );
++}
++
++export default App;
+Index: sale_site/src/view/components/EventCard/EventCard.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/EventCard/EventCard.tsx b/sale_site/src/view/components/EventCard/EventCard.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424244)
++++ b/sale_site/src/view/components/EventCard/EventCard.tsx	(date 1636812424244)
+@@ -0,0 +1,44 @@
++import {FC, useState} from 'react';
++import { Link } from 'react-router-dom';
++import { EventCardType } from '../../../types';
++import '../css/site.css'
++
++
++
++
++export const EventCard:FC<EventCardType> = ({
++    eventName,
++    eventDate,
++    eventSummary,
++    eventViews,
++})=>{
++
++  return (
++    <div className="EventCard my_card">
++        <div className="mdl-cell mdl-cell--4-col">
++            <div className="demo-card-square mdl-card mdl-shadow--2dp">
++                <div className="mdl-card__title mdl-card--expand">
++                    <h2 className="mdl-card__title-text">
++                        {eventName}
++                        
++                    </h2>
++                    <p>
++                        {eventDate}  
++                    </p>
++                </div>
++                <div className="mdl-card__supporting-text">
++                    {eventSummary}
++                </div>
++                <div className="mdl-card__actions mdl-card--border">
++                    <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
++                        Подробнее о событии
++                    </a>
++                    <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent my_button">
++                        КУПИТЬ
++                    </button>
++                </div>
++            </div>
++        </div>
++    </div>
++  )
++}
+\ No newline at end of file
+Index: sale_site/src/view/components/LoginForm/LoginForm.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sale_site/src/view/components/LoginForm/LoginForm.tsx b/sale_site/src/view/components/LoginForm/LoginForm.tsx
+new file mode 100644
+--- /dev/null	(date 1636812424244)
++++ b/sale_site/src/view/components/LoginForm/LoginForm.tsx	(date 1636812424244)
+@@ -0,0 +1,70 @@
++import React, { FC, useCallback, useState } from "react";
++import { Link } from "react-router-dom";
++import { LoginFormType } from "../../../types";
++import "../css/site.css";
++
++
++const EMPTY_FORM = {
++  login: "",
++  password: "",
++};
++
++export const LoginForm: FC<LoginFormType> = ({ path }) => {
++  const [form, setForm] = useState(EMPTY_FORM);
++
++  const loginChandeHandle = useCallback((e) => {
++    setForm((prev) => ({
++      ...prev,
++      login: e.target.value,
++    }));
++  }, []);
++  const passwordChandeHandle = useCallback((e) => {
++    setForm((prev) => ({
++      ...prev,
++      password: e.target.value,
++    }));
++  }, []);
++  const formSubmitHandle = useCallback((e) => {
++    e.preventDefault();
++    console.log (form)
++  }, [form]);
++
++  return (
++    <form onSubmit={formSubmitHandle} className="LoginForm">
++      <div className="Login">
++        <div className="Login_page"></div>
++        <div className="Login_page">
++          <label htmlFor="">Логин</label>
++          <input
++            id="login"
++            name="login"
++            value={form.login}
++            onChange={loginChandeHandle}
++            className="Login_page-login"
++            type="text"
++          />
++          <label htmlFor="">Пароль</label>
++          <input
++            id="password"
++            name="password"
++            value={form.password}
++            onChange={passwordChandeHandle}
++            className="Login_page-password"
++            type="password"
++          />
++        </div>
++        <div className="button">
++          <button
++            type='submit'
++            className="mdl-button mdl-js-button mdl-button--raised"
++          >
++            <a>
++              <Link to={`${path}`}></Link>
++            </a>
++            Войти
++          </button>
++        </div>
++      </div>
++    </form>
++  );
++};
